@@ -1,0 +1,20 @@
+# Ak.Framework
+This framework contains libraries which can be used to simplify the process of .net development. Right now it consists of the following libraries:
+<br/>
+<ul>
+  <li>
+    <h4>Ak.Framework.Core</h4>
+    Library contains functionality and extensions which lead to more convenient ways of .net developing. It is also used further in other framework libraries. For example it has different extensions for type conversion, linq, basic comparers and enums.<br/><br/>
+    This library is available at Nuget as <a href="https://www.nuget.org/packages/Ak.Framework.Core">Ak.Framework.Core</a>.
+  </li> 
+  <li>
+    <h4>Ak.Framework.Morphology</h4>
+    The library provides functionality for translitterization, names, lastnames and middlenames declining, converting numerics to string presentation. Right now everything works only for Russian language.
+    <br/><br/>
+    This library is available at Nuget as <a href="https://www.nuget.org/packages/Ak.Framework.Morphology">Ak.Framework.Morphology</a>.
+  </li>  
+</ul>
+
+By the way source comments are in Russian right now. May be later I'll translate them to English.
+
+For the detailed description of methods and the way you can use these libs, please look thorugh the xml description either attached to the nuget build or in the source code.
