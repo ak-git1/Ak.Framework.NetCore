@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
 namespace Ak.Framework.Core.Helpers
 {
@@ -17,6 +20,16 @@ namespace Ak.Framework.Core.Helpers
         {
             Uri baseUri = new Uri(baseUrl);
             return new Uri(baseUri, relativeUrl).ToString();
+        }
+
+        /// <summary>
+        /// Генерация строки аргументов для http-запроса
+        /// </summary>
+        /// <param name="arguments">Аргументы</param>
+        /// <returns></returns>
+        public static string GenerateArgumentsString(Dictionary<string, string> arguments)
+        {
+            return HttpUtility.UrlEncode(string.Join("&", arguments.Select(kvp => $"{kvp.Key}={kvp.Value}")));
         }
     }
 }
