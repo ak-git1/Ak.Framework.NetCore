@@ -1,0 +1,3213 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ak.Framework.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Ak.Framework.Core.Attributes.DescriptionWithShortString">
+            <summary>
+            Атрибут описания с расширением, включающим сокращенное описание
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Attributes.DescriptionWithShortString.ShortDescription">
+            <summary>
+            Сокращенное описание
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Attributes.DescriptionWithShortString.#ctor(System.String,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="description">Описание</param>
+            <param name="shortDescription">Сокращенное описание</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Collections.DynamicDictionary">
+            <summary>
+            Динамический словарь
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Collections.DynamicDictionary._dictionary">
+            <summary>
+            Словарь
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Collections.DynamicDictionary.Count">
+            <summary>
+            Количество элементов
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Collections.DynamicDictionary.Item(System.String)">
+            <summary>
+            Значение по ключу
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.DynamicDictionary.GetDynamicMemberNames">
+            <summary>
+            Получение списка ключей
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.DynamicDictionary.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)">
+            <summary>
+            Попытка получения значения по ключу
+            </summary>
+            <param name="binder">Объект с ключом</param>
+            <param name="result">Результат</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.DynamicDictionary.TryGetValue(System.String,System.Object@)">
+            <summary>
+            Попытка получения значения
+            </summary>
+            <param name="key">Ключ</param>
+            <param name="value">Значение</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.DynamicDictionary.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)">
+            <summary>
+            Попытка установки значения
+            </summary>
+            <param name="binder">Объект с ключом</param>
+            <param name="value">Значение</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1">
+            <summary>
+            Упорядоченная очередь фиксированного размера
+            </summary>
+            <typeparam name="T"></typeparam>
+            <seealso cref="T:System.Collections.Generic.IEnumerable`1" />
+            <seealso cref="T:System.Collections.ICollection" />
+        </member>
+        <member name="F:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1._array">
+            <summary>
+            Массив
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1._spaceLeft">
+            <summary>
+            Оставшееся место
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1._version">
+            <summary>
+            Версия
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.Count">
+            <summary>
+            Количество
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.IsQueueFilledUp">
+            <summary>
+            Признак того, что очередь заполнена
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.IsSynchronized">
+            <summary>
+            Признак того, что очередь синхронизирована 
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.Item(System.Int32)">
+            <summary>
+            Получение элемента по индексу
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.Peek">
+            <summary>
+            Получение нального элемента
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.SyncRoot">
+            <summary>
+            SyncRoot
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.#ctor(System.Int32)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="capacity">Количество элементов</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Копирование элементов, начиная с индекса
+            </summary>
+            <param name="array">Массив</param>
+            <param name="index">Индекс</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.Dequeue">
+            <summary>
+            Извлечение из очереди
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.Dequeue(System.Int32)">
+            <summary>
+            Извлечение из очереди
+            </summary>
+            <param name="index">Индекс</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.Enqueue(`0)">
+            <summary>
+            Добавление в очередь
+            </summary>
+            <param name="obj">Объект</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.EnqueueAnyWay(`0,System.Boolean@)">
+            <summary>
+            Добавление в очредь, даже если нет места
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="dequeued">Признак того, что было выполнено предварительное освобождение очереди</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.EnqueueAnyWay(`0,System.Int32,System.Boolean@)">
+            <summary>
+            Добавление в очредь, даже если нет места
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="indexToRemove">Индекс элемента для удаления</param>
+            <param name="dequeued">Признак того, что было выполнено предварительное освобождение очереди</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.GetEnumerator">
+            <summary>
+            Получение инумератора
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Получение инумератора
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1">
+            <summary>
+            Инумератор очереди
+            </summary>
+            <typeparam name="TEnumerator">Тип</typeparam>
+            <seealso cref="T:System.Collections.Generic.IEnumerable`1" />
+            <seealso cref="T:System.Collections.ICollection" />
+        </member>
+        <member name="F:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1._queue">
+            <summary>
+            Очередь
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1._currentIndex">
+            <summary>
+            Текущий индекс
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1._valuesCount">
+            <summary>
+            Количество элементов
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1._version">
+            <summary>
+            Версия
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1.Current">
+            <summary>
+            Текущий элемент
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1.System#Collections#IEnumerator#Current">
+            <summary>
+            Текущий элемент
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1.#ctor(Ak.Framework.Core.Collections.FixedCapacityIndexedQueue{`1})">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="queue">Очередь</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1.Dispose">
+            <summary>
+            Деструктор
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1.MoveNext">
+            <summary>
+            Переход к следующему элементу
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.FixedCapacityIndexedQueue`1.QueueEnumerator`1.Reset">
+            <summary>
+            Сброс
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Core.Collections.MultipleValueDictionary`2">
+            <summary>
+            Спаровчник с несколькими значениями
+            </summary>
+            <typeparam name="TKey">Тип ключа</typeparam>
+            <typeparam name="TValue">Тип значения</typeparam>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.MultipleValueDictionary`2.AddValue(`0,`1)">
+            <summary>
+            Добавление значения
+            </summary>
+            <param name="key">Ключ</param>
+            <param name="newItem">Элемент</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.MultipleValueDictionary`2.AddValues(`0,System.Collections.Generic.IEnumerable{`1})">
+            <summary>
+            Добавление значений
+            </summary>
+            <param name="key">Ключ</param>
+            <param name="newItems">Добавляемые элементы</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.MultipleValueDictionary`2.RemoveAll(`0,System.Predicate{`1})">
+            <summary>
+            Удаление всех элементов
+            </summary>
+            <param name="key">Ключ</param>
+            <param name="match">Критерий удаления</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.MultipleValueDictionary`2.RemoveValue(`0,`1)">
+            <summary>
+            Удаление элемента
+            </summary>
+            <param name="key">Ключ</param>
+            <param name="value">Тип значения</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Collections.MultipleValueDictionary`2.EnsureKey(`0)">
+            <summary>
+            Проверка наличия ключа
+            </summary>
+            <param name="key">Ключ</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Comparers.NaturalSortComparer">
+            <summary>
+            Класс для обычного сравнения
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Comparers.NaturalSortComparer._isAscending">
+            <summary>
+            Признак того, что сортировка проводится по возрастанию
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Comparers.NaturalSortComparer._table">
+            <summary>
+            Таблица сравниваемых элементов
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Comparers.NaturalSortComparer.#ctor(System.Boolean)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="inAscendingOrder">Признак того, что сортировка проводится по возрастанию</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Comparers.NaturalSortComparer.Compare(System.String,System.String)">
+            <summary>
+            Сравнение
+            </summary>
+            <param name="x">Объект для сравнения 1</param>
+            <param name="y">Объект для сравнения 2</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Comparers.NaturalSortComparer.Dispose">
+            <summary>
+            Деструктор
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Comparers.NaturalSortComparer.PartCompare(System.String,System.String)">
+            <summary>
+            Сравнение частей
+            </summary>
+            <param name="left">Левая часть</param>
+            <param name="right">Правая часть</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Comparers.NaturalSortComparer.System#Collections#Generic#IComparer{System#String}#Compare(System.String,System.String)">
+            <summary>
+            Сравнение
+            </summary>
+            <param name="x">Объект для сравнения 1</param>
+            <param name="y">Объект для сравнения 2</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Converters.ResolutionConverter">
+            <summary>
+            Конвертер значения разрешения изображения
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Converters.ResolutionConverter.MmsToPoint">
+            <summary>
+            Количество мм в точках
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Converters.ResolutionConverter.MmsToInch">
+            <summary>
+            Количество мм в дюйме
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.ResolutionConverter.MmToPoints(System.Single)">
+            <summary>
+            Преобразование мм в точки
+            </summary>
+            <param name="mm">Миллиметры</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.ResolutionConverter.MmToPx(System.Double,System.Single)">
+            <summary>
+            Преобразование мм в пиксели
+            </summary>
+            <param name="mm">Миллиметры</param>
+            <param name="resolution">Разрешение</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.ResolutionConverter.PxToMm(System.Double,System.Single)">
+            <summary>
+            Преобразование пикселей в мм
+            </summary>
+            <param name="px">Пиксели</param>
+            <param name="resolution">Разрешение</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.ResolutionConverter.PxToPoints(System.Double,System.Single)">
+            <summary>
+            Преобразование пикселей в точки
+            </summary>
+            <param name="px">Пиксели</param>
+            <param name="resolution">Разрешение</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Enums.Genders">
+            <summary>
+            Пол
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.Genders.Unknown">
+            <summary>
+            Не указано
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.Genders.Male">
+            <summary>
+            Мужской
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.Genders.Female">
+            <summary>
+            Женский
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Core.Enums.MemoryUnits">
+            <summary>
+            Единицы измерения объема памяти
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.MemoryUnits.Bytes">
+            <summary>
+            Байт
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.MemoryUnits.Kb">
+            <summary>
+            Килобай
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.MemoryUnits.Mb">
+            <summary>
+            Мегабайт
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.MemoryUnits.Gb">
+            <summary>
+            Гигабайт
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.MemoryUnits.Tb">
+            <summary>
+            Терабайт
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.MemoryUnits.Pb">
+            <summary>
+            Петабайт
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.MemoryUnits.Eb">
+            <summary>
+            Эксабайт
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.MemoryUnits.Zb">
+            <summary>
+            Зеттабайт
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.MemoryUnits.YiB">
+            <summary>
+            Йоттабайт
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Core.Enums.Orientations">
+            <summary>
+            Расположения
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.Orientations.Unknown">
+            <summary>
+            Не определено
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.Orientations.Horizontal">
+            <summary>
+            Горизонтальное
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.Orientations.Vertical">
+            <summary>
+            Вертикальное
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Core.Enums.TimeIntervalTypes">
+            <summary>
+            Типы временных интервалов
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.TimeIntervalTypes.Millisecond">
+            <summary>
+            Миллисекунда
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.TimeIntervalTypes.Second">
+            <summary>
+            Секунда
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.TimeIntervalTypes.Minute">
+            <summary>
+            Минута
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.TimeIntervalTypes.Hour">
+            <summary>
+            Час
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.TimeIntervalTypes.Day">
+            <summary>
+            День
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.TimeIntervalTypes.Week">
+            <summary>
+            Неделя
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.TimeIntervalTypes.Month">
+            <summary>
+            Месяц
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.TimeIntervalTypes.Quarter">
+            <summary>
+            Квартал
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Enums.TimeIntervalTypes.Year">
+            <summary>
+            Год
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Core.Events.ExceptionEventArgs">
+            <summary>
+            Аргументы события с информацией об исключении
+            </summary>
+            <seealso cref="T:System.EventArgs" />
+        </member>
+        <member name="P:Ak.Framework.Core.Events.ExceptionEventArgs.Exception">
+            <summary>
+            Исключение
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Events.ExceptionEventArgs.#ctor(System.Exception)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="exception">Исключение</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.ArrayExtensions">
+            <summary>
+            Расширения для массивов
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ArrayExtensions.ConvertToDictionary``1(``0[],System.Int32)">
+            <summary>
+            Преобразование массива в словарь значений
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="array">Словарь</param>
+            <param name="indexShift">Значение, на которое изменяется ключ</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ArrayExtensions.ArrayToDictionaryWithIndexInKey``1(``0[],System.Predicate{``0})">
+            <summary>
+            Преобразование массива в словарь с ключами из индексов
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="array">Массив</param>
+            <param name="itemCondition">Условие</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.ConvertExtentions">
+            <summary>
+            Расширения для конвертации данных
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToStr(System.Object,System.String)">
+            <summary>
+            Конвертировать в строку.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToInt32(System.Object,System.Int32)">
+            <summary>
+            Конвертировать в Int32.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToInt32(System.Object,System.Nullable{System.Int32})">
+            <summary>
+            Конвертировать в Int32.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToInt64(System.Object,System.Int64)">
+            <summary>
+            Конвертировать в Int64.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToInt64(System.Object,System.Nullable{System.Int64})">
+            <summary>
+            Конвертировать в Int64.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDouble(System.Object,System.Double,System.Boolean)">
+            <summary>
+            Конвертировать в Double.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <param name="replaceDecimalSeparatorToEnvironmentsDecimalSeparator">Заменить разделитель на разделитель окружения</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDouble(System.Object,System.Nullable{System.Double},System.Boolean)">
+            <summary>
+            Конвертировать в Double.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <param name="replaceDecimalSeparatorToEnvironmentsDecimalSeparator">Заменить разделитель на разделитель окружения</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToSingle(System.Object,System.Single)">
+            <summary>
+            Конвертировать в Single.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToSingle(System.Object,System.Nullable{System.Single})">
+            <summary>
+            Конвертировать в Single.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDecimal(System.Object,System.Decimal,System.Boolean)">
+            <summary>
+            Конвертировать в Decimal.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <param name="replaceDecimalSeparatorToEnvironmentsDecimalSeparator">Заменить разделитель на разделитель окружения</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDecimal(System.Object,System.Nullable{System.Decimal},System.Boolean)">
+            <summary>
+            Конвертировать в Decimal.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <param name="replaceDecimalSeparatorToEnvironmentsDecimalSeparator">Заменить разделитель на разделитель окружения</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToBoolean(System.Object,System.Boolean)">
+            <summary>
+            Конвертировать в Boolean.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToBoolean(System.Object,System.Nullable{System.Boolean})">
+            <summary>
+            Конвертировать в Boolean.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToGuid(System.Object,System.Guid)">
+            <summary>
+            Конвертировать в Guid.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToGuid(System.Object,System.Nullable{System.Guid})">
+            <summary>
+            Конвертировать в Guid.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDateTime(System.Object,System.DateTime)">
+            <summary>
+            Конвертировать в DateTime.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDateTime(System.Object,System.Nullable{System.DateTime})">
+            <summary>
+            Конвертировать в DateTime.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToTimeSpan(System.Object,System.TimeSpan)">
+            <summary>
+            Конвертировать в TimeSpan.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToTimeSpan(System.Object,System.Nullable{System.TimeSpan})">
+            <summary>
+            Конвертировать в TimeSpan?.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToTimeSpanEx(System.Object,System.TimeSpan)">
+            <summary>
+            Конвертировать в TimeSpan.
+            Позволяет устанавливать значения больше 24:00
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToTimeSpanEx(System.Object,System.Nullable{System.TimeSpan})">
+            <summary>
+            Конвертировать в TimeSpan?.
+            Позволяет устанавливать значения больше 24:00, например, 25:00:00
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToEnum``1(System.Object,``0)">
+            <summary>
+            Конвертировать в Enum
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToEnum``1(System.Object,System.Nullable{``0})">
+            <summary>
+            Конвертировать в Enum.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToBooleanString(System.Object,System.String,System.String)">
+            <summary>
+            Приведение к строке
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="trueString">Строка значения true</param>
+            <param name="falseString">Строка значения false</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDateString(System.Object,System.String,System.String)">
+            <summary>
+            Преобразование к дате в строковом формате
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="format">Формат</param>
+            <param name="emptyDateString">Строка для пустой даты</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDateTimeString(System.Object,System.String,System.String)">
+            <summary>
+            Преобразование к дате и времени в строковом формате
+            </summary>
+            <param name="obj">Дата и время</param>
+            <param name="format">Формат</param>
+            <param name="emptyDateString">Строка для пустой даты</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToNumberString(System.Object,System.String,System.String,System.String)">
+            <summary>
+            Преобразование к числу в строковом формате
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="format">Формат</param>
+            <param name="emptyNumber">Строка для пустого числового значения</param>
+            <param name="delimeter">Разделитель дробной части</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToStream(System.Byte[])">
+            <summary>
+            Преобразование массива байтов в поток
+            </summary>
+            <param name="bytes">Массив байтов</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Nullable{System.Decimal},System.String)">
+            <summary>
+            Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
+            </summary>
+            <param name="value">Значение</param>
+            <param name="defaultValue">Значение по умолчанию</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Decimal)">
+            <summary>
+            Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
+            </summary>
+            <param name="value">Значение</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Nullable{System.Double},System.String)">
+            <summary>
+            Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
+            </summary>
+            <param name="value">Значение</param>
+            <param name="defaultValue">Значение по умолчанию</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Double)">
+            <summary>
+            Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
+            </summary>
+            <param name="value">Значение</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Nullable{System.Single},System.String)">
+            <summary>
+            Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
+            </summary>
+            <param name="value">Значение</param>
+            <param name="defaultValue">Значение по умолчанию</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Single)">
+            <summary>
+            Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
+            </summary>
+            <param name="value">Значение</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.DataReaderExtensions">
+            <summary>
+            Расширения для работы с DataReader'ом
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DataReaderExtensions.FieldExists(System.Data.IDataReader,System.String)">
+            <summary>
+            Проверка на сущестование столбца (поля)
+            </summary>
+            <param name="reader">Data Reader</param>
+            <param name="fieldName">Название поля (столбца)</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.DateTimeExtensions">
+            <summary>
+            Расширения для даты и времени
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.TruncateMilliseconds(System.DateTime)">
+            <summary>
+            Получение даты и времени без миллисекунд
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.TruncateSeconds(System.DateTime)">
+            <summary>
+            Получение даты и времени без секнуд
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.TruncateMinutes(System.DateTime)">
+            <summary>
+            Получение даты и времени без минут
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.TruncateHours(System.DateTime)">
+            <summary>
+            Получение даты и времени без часов
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.TruncateDays(System.DateTime)">
+            <summary>
+            Получение даты и времени без дней
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.SetWithTimeInterval(System.DateTime,System.Boolean,System.Int32,Ak.Framework.Core.Enums.TimeIntervalTypes)">
+            <summary>
+            Установка значения временного интервала
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <param name="isIntervalAfter">Интервал после</param>
+            <param name="timeInterval">Временной интервал</param>
+            <param name="intervalType">Тип интервала времени</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.ToDateString(System.Nullable{System.DateTime},System.String,System.String)">
+            <summary>
+            Преобразование к дате в строковом формате
+            </summary>
+            <param name="dt">Дата и время</param>
+            <param name="format">Формат</param>
+            <param name="emptyDateString">Строка для пустой даты</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.ToRusDateString(System.DateTime)">
+            <summary>
+            Преобразование к формату длинной строки с русской кодировкой
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.ToShort24HoursTimeString(System.DateTime)">
+            <summary>
+            Преобразование к 24-часовому формату времени
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.ToShort24HoursTimeString(System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Преобразование к 24-часовому формату времени
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <param name="emptyDateString">Строка для пустой даты</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.EndOfYear(System.DateTime)">
+            <summary>
+            Получение конца года
+            </summary>
+            <param name="date">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.EndOfQuarter(System.DateTime)">
+            <summary>
+            Получение конца квартала
+            </summary>
+            <param name="date">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)">
+            <summary>
+            Получение конца месяца
+            </summary>
+            <param name="date">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.EndOfWeek(System.DateTime)">
+            <summary>
+            Получение конца недели
+            </summary>
+            <param name="date">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.EndOfDay(System.DateTime)">
+            <summary>
+            Получение конца дня
+            </summary>
+            <param name="date">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.StartOfYear(System.DateTime)">
+            <summary>
+            Получение начала года
+            </summary>
+            <param name="date">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.StartOfQuarter(System.DateTime)">
+            <summary>
+            Получение начала квартала
+            </summary>
+            <param name="date">Дата и время</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.StartOfMonth(System.DateTime)">
+            <summary>
+            Получение начала месяца
+            </summary>
+            <param name="date">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.StartOfWeek(System.DateTime)">
+            <summary>
+            Получение начала недели
+            </summary>
+            <param name="date">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.StartOfDay(System.DateTime)">
+            <summary>
+            Получение начала дня
+            </summary>
+            <param name="date">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.ToDatabaseString(System.DateTime)">
+            <summary>
+            Приведение даты к строковому представлению для БД
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.Year(System.Nullable{System.DateTime})">
+            <summary>
+            Получение года
+            </summary>
+            <param name="dateTime">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.EndOfDay(System.Nullable{System.DateTime})">
+            <summary>
+            Получение конца дня
+            </summary>
+            <param name="date">Дата и время</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.TimeSpan)">
+            <summary>
+            Установить временную часть даты
+            </summary>
+            <param name="date">Дата</param>
+            <param name="time">Время</param>
+            <returns>Дата</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.SetTime(System.Nullable{System.DateTime},System.TimeSpan)">
+            <summary>
+            Установить временную часть даты
+            </summary>
+            <param name="date">Дата</param>
+            <param name="time">Время</param>
+            <returns>Дата</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.AddMonthsCalendar(System.DateTime,System.Single)">
+            <summary>
+            Добавить к дате количество месяцев по календарным правилам фонда. Учитывается только целое число месяцев.
+            Времянная часть исходной даты сохраняется
+            </summary>
+            <param name="date">Дата</param>
+            <param name="months">Количество месяцев</param>
+            <returns>Дата</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.AddMonthsCalendar(System.Nullable{System.DateTime},System.Single)">
+            <summary>
+            Добавить к дате количество месяцев по календарным правилам фонда. Учитывается только целое число месяцев.
+            Времянная часть исходной даты сохраняется
+            </summary>
+            <param name="date">Дата</param>
+            <param name="months">Количество месяцев</param>
+            <returns>Дата</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.IsLess(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Проверка что дата меньше заданной (сравнение по дням)
+            </summary>
+            <param name="date">Дата</param>
+            <param name="date2">Дата для проверки</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.Shift(System.DateTime,System.Nullable{Ak.Framework.Core.Enums.TimeIntervalTypes},System.Nullable{System.Int32})">
+            <summary>
+            Сдвинуть дату на заданную величину
+            </summary>
+            <param name="date">Дата</param>
+            <param name="durationTimeIntervalType">Тип временного интервала</param>
+            <param name="shiftValue">Значение сдвига</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.GetQuarter(System.DateTime)">
+            <summary>
+            Возвращает номер квартала по заданной дате
+            </summary>
+            <param name="date">Дата</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.AddQuarters(System.DateTime,System.Int32)">
+            <summary>
+            Добавить заданное число кварталов к данной дате
+            </summary>
+            <param name="date">Дата</param>
+            <param name="count">Число кварталов</param>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.DateTimeExtensions.CurrentCulture">
+            <summary>
+            Текущий язык и региональные параметры 
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.ToFormatted(System.DateTime)">
+            <summary>
+            Преобразует "10.09.2015" в "сентябрь 2015"  
+            </summary>
+            /// <param name="date">Дата</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.AddMonths(System.DateTime,System.Nullable{System.Decimal})">
+            <summary>
+            Возвращает новый объект DateTime, добавляющий заданное число месяцев (в десятичном выражении) к значению данного экземпляра.
+            </summary>
+            <param name="dateTime">Дата</param>
+            <param name="months">Срок в месяцах [Допустимый шаг изменения длительности равен 0,5 месяца]</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.GetIso8601WeekOfYear(System.DateTime)">
+            <summary>
+            Получение номера недели
+            </summary>
+            <param name="date">Дата</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.GetWeekNumberOfMonth(System.DateTime)">
+            <summary>
+            Получение номера недели в месяце
+            </summary>
+            <param name="date">Дата</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DateTimeExtensions.Range(System.DateTime,System.DateTime)">
+            <summary>
+            Получение списка дат в рамках диапазона
+            </summary>
+            <param name="startDate">Начальная дата</param>
+            <param name="endDate">Конечная дата</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.DictionaryExtensions">
+            <summary>
+            Расширения для словаря
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DictionaryExtensions.GetValue``1(System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            Получение значения
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="dictionary">Словарь</param>
+            <param name="key">Ключ</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DictionaryExtensions.ConvertToArray``1(System.Collections.Generic.Dictionary{System.Int32,``0},System.Int32)">
+            <summary>
+            Преобразование словаря в массив
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="dictionary">Словарь</param>
+            <param name="indexShift">Сдвиг индекса</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DictionaryExtensions.ConvertToArray``2(System.Collections.Generic.Dictionary{``0,``1})">
+            <summary>
+            Преобразование в массив
+            </summary>
+            <typeparam name="TKey">Тип ключа</typeparam>
+            <typeparam name="TValue">Тип значения</typeparam>
+            <param name="dictionary">Словарь</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.DoubleExtensions">
+            <summary>
+            Расширения над стандартными методами дробных чисел.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DoubleExtensions.Round(System.Double,System.Int32)">
+            <summary>
+            Округление
+            </summary>
+            <param name="num">Число</param>
+            <param name="digitsAfterComma">Количество цифр дробной части в возвращаемом значении</param>
+            <returns>Число, ближайшее к параметру num, количество цифр дробной части которого равно digitsAfterComma</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DoubleExtensions.IsEqual(System.Double,System.Double)">
+            <summary>
+            Проверка на равенство
+            </summary>
+            <param name="lhs">Элемент  для сравнения 1</param>
+            <param name="rhs">Элемент  для сравнения 2</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DoubleExtensions.IsEqual(System.Double,System.Single)">
+            <summary>
+            Проверка на равенство
+            </summary>
+            <param name="lhs">Элемент  для сравнения 1</param>
+            <param name="rhs">Элемент  для сравнения 2</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DoubleExtensions.IsEqual(System.Single,System.Double)">
+            <summary>
+            Проверка на равенство
+            </summary>
+            <param name="lhs">Элемент  для сравнения 1</param>
+            <param name="rhs">Элемент  для сравнения 2</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.DoubleExtensions.IsEqual(System.Single,System.Single)">
+            <summary>
+            Проверка на равенство
+            </summary>
+            <param name="lhs">Элемент  для сравнения 1</param>
+            <param name="rhs">Элемент  для сравнения 2</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.FileSizeExtensions">
+            <summary>
+            Расширения для работы с размерами файлов
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.FileSizeExtensions.SizeInBytesToUserFriendlyFileSize(System.Int64)">
+            <summary>
+            Приведение к человекочитабельному размеру файла
+            </summary>
+            <param name="sizeInBytes">Рамер файла </param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.FileSizeExtensions.SizeInBytesToUserFriendlyFileSize(System.Int64,System.Double@,Ak.Framework.Core.Enums.MemoryUnits@)">
+            <summary>
+            Приведение к человекочитабельному размеру файла
+            </summary>
+            <param name="sizeInBytes">Размер файла</param>
+            <param name="sizeValue">Значение</param>
+            <param name="sizeUnit">Единица измерения</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.IntegerExtentions">
+            <summary>
+            Расширения над стандартными методами целых чисел.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsInEnumsList``1(System.Int32,``0[])">
+            <summary>
+            Проверка на то, что число находится среди значений инумератора
+            </summary>
+            <param name="num">Число</param>
+            <param name="enums">Массив инумераторов</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsInEnumsList``1(``0,``0[])">
+            <summary>
+            Проверка на то, что значение находится среди значений инумератора
+            </summary>
+            <param name="num">Значение</param>
+            <param name="enums">Массив инумераторов</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.ToFileSizeString(System.Int32)">
+            <summary>
+            Возвращает строку в байтах/килобайтах/мегабайтах
+            </summary>
+            <param name="num">Число</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsFlagsEnabled``1(``0,``0[])">
+            <summary>
+            Проверить, включены ли значения инумератора (для инумераторов с атрибутом FlagsAttribute)
+            </summary>
+            <param name="flagsEnum">Инумератор</param>
+            <param name="options">Его значения</param>
+            <returns>Признак</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsFlagsEnabled``1(System.Nullable{``0},``0[])">
+            <summary>
+            Проверить, включены ли значения инумератора (для инумераторов с атрибутом FlagsAttribute)
+            </summary>
+            <param name="flagsEnum">Инумератор</param>
+            <param name="options">Его значения</param>
+            <returns>Признак</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.Days(System.Int32)">
+            <summary>
+            Приведение к TimeSpan (дни)
+            </summary>
+            <param name="days">Дни</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.Hours(System.Int32)">
+            <summary>
+            Приведение к TimeSpan (часы)
+            </summary>
+            <param name="hours">Часы</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.Miliseconds(System.Int32)">
+            <summary>
+            Приведение к TimeSpan (миллисекунды)
+            </summary>
+            <param name="ms">Миллисекунды</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.Minutes(System.Int32)">
+            <summary>
+            Приведение к TimeSpan (минуты)
+            </summary>
+            <param name="minutes">Минуты</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.Seconds(System.Int32)">
+            <summary>
+            Приведение к TimeSpan (секунды)
+            </summary>
+            <param name="seconds">Секунды</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsEven(System.Int32)">
+            <summary>
+            Четное
+            </summary>
+            <param name="number">Число</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsOdd(System.Int32)">
+            <summary>
+            Нечетное
+            </summary>
+            <param name="number">Число</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.ToLetter(System.Int32,System.Boolean)">
+            <summary>
+            Преобразование числа в букву
+            </summary>
+            <param name="number">Число</param>
+            <param name="isCaps">Заглавная буква</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.LinqExtensions">
+            <summary>
+            Расширения над стандартными методами Linq2Object.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.SelectEx``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Расширение для метода Select, которое обрабатывает в т.ч. пустые коллекции.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.Each``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+            <summary>
+            Итератор, возвращающий индекс текущего значения коллекции
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.WhereEx``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Расширение для метода Where, которое обрабатывает в т.ч. пустые коллекции.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.AggregateEx``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``0,``0})">
+            <summary>
+            Расширение для метода Aggregate, которое обрабатывает в т.ч. пустые коллекции.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.ToListEx``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Расширение для метода ToList, которое обрабатывает в т.ч. пустые коллекции.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.AverageEx``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double},System.Double)">
+            <summary>
+            Расширение для метода Average, которое обрабатывает в т.ч. пустые коллекции.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.AverageEx``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Decimal},System.Decimal)">
+            <summary>
+            Расширение для метода Average, которое обрабатывает в т.ч. пустые коллекции.
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <param name="source">Входящий список</param>
+            <param name="selector">Функция преобразования, применяемая к каждому элементу</param>
+            <param name="defaultValue">Значение по умолчанию</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.Clone``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Клонирование списка
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="list">Список</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.PreviousOrDefault``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})">
+            <summary>
+            Получение предыдущего значения в списке или значения по умолчанию
+            </summary>
+            <typeparam name="TSource">Тип</typeparam>
+            <param name="source">Список</param>
+            <param name="match">Сравнение</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.NextOrDefault``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})">
+            <summary>
+            Получение следующего значения в списке или значения по умолчанию 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.IsLast``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            Проверка на то, что элемент является последним
+            </summary>
+            <typeparam name="T">Тим</typeparam>
+            <param name="items">Список</param>
+            <param name="item">Элемент</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.IsFirst``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            Проверка на то, что элемент является первым
+            </summary>
+            <typeparam name="T">Тим</typeparam>
+            <param name="items">Список</param>
+            <param name="item">Элемент</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.IsFirstOrLast``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            Проверка на то, что элемент является первым или последним
+            </summary>
+            <typeparam name="T">Тим</typeparam>
+            <param name="items">Список</param>
+            <param name="item">Элемент</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.ToSequence``1(``0)">
+            <summary>
+            Преобразование элемента в последовательность
+            </summary>
+            <typeparam name="T">Тип элемента</typeparam>
+            <param name="elem">Элемент</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.One``1(``0)">
+            <summary>
+            Создать последовательность из одного элемента
+            </summary>
+            <typeparam name="T">Тип элемента</typeparam>
+            <param name="element">Элемент</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Добавление диапазона
+            </summary>
+            <typeparam name="TItem">Тип</typeparam>
+            <param name="list">Список</param>
+            <param name="items">Элементы для добавления</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.Append``1(System.Collections.Generic.IList{``0},``0)">
+            <summary>
+            Добавление элемента
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="list">Список</param>
+            <param name="item">Элемент для добавления</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Выполнение цикличного запуска
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="enumerable">Список</param>
+            <param name="action">Метод</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+            <summary>
+            Выполнение цикличного запуска
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="enumerable">Список</param>
+            <param name="action">Метод</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.IsEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Проверка на то, что список пуст
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="enumerable">Список</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.Sort``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``0,System.Int32},System.Boolean)">
+            <summary>
+            Сортировка
+            </summary>
+            <typeparam name="TItem">Тип</typeparam>
+            <param name="enumerable">Список</param>
+            <param name="comparerFunc">Метод для сравнения</param>
+            <param name="ascending">Признак того, что сортировка идет по возрастанию</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.ToDictionary``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">
+            <summary>
+            Преобразование в словарь
+            </summary>
+            <typeparam name="TKey">Тип ключа</typeparam>
+            <typeparam name="TValue">Тип значения</typeparam>
+            <param name="enumerable">Список</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.Multiply(System.Collections.Generic.IEnumerable{System.Double},System.Double)">
+            <summary>
+            Умножение элементов списка
+            </summary>
+            <param name="enumerable">Список</param>
+            <param name="defaultValue">Значение по умолчанию</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.LinqExtensions.ActionComparer`1">
+            <summary>
+            Класс для сравнения элементов
+            </summary>
+            <typeparam name="TItem">Тип элемента для сравнения</typeparam>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.LinqExtensions.ActionComparer`1._comparer">
+            <summary>
+            Метод для сравнения
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.ActionComparer`1.#ctor(System.Func{`0,`0,System.Int32})">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="comparer">Метод для сравнения</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.LinqExtensions.ActionComparer`1.Compare(`0,`0)">
+            <summary>
+            Сравнение
+            </summary>
+            <param name="x">Объект для сравнения 1</param>
+            <param name="y">Объект для сравнения 2</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.ListExtensions">
+            <summary>
+            Расширения для List
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ListExtensions.ToXmlString``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Приведение к строковому представлению xml
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="list">Список</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ListExtensions.ToTextList``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)">
+            <summary>
+            Приведение к текстовому списку
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="enumerable">Список</param>
+            <param name="itemTemplate">Шаблон элемента</param>
+            <param name="delimeter">Разделитель</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ListExtensions.FirstOrDefaultEx``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Возвращает экземпляр класса T (а не null), если список не содержит элементов
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="list">Список</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.ObjectExtensions">
+            <summary>
+            Расширения для объекта
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.Cast``1(System.Object)">
+            <summary>
+            Приведение типов без проверки
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="obj">Объект</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.ToFormatedString(System.Object,System.String)">
+            <summary>
+            Получение форматированной строки
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="format">Формат</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.GetValueByPropertyName``1(System.Object,System.String)">
+            <summary>
+            Получение значения свойства по названию и атрибуту
+            </summary>
+            <typeparam name="T">Атрибут свойства</typeparam>
+            <param name="obj">Объект</param>
+            <param name="propertyName">Имя свойства</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.GetValueByPropertyName(System.Object,System.String)">
+            <summary>
+            Получение значения свойства по названию и атрибуту
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="propertyName">Имя свойства</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.GetValueByMethodName(System.Object,System.String)">
+            <summary>
+            Получение значения метода по его названию и входным параметрам
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="methodNameWithParameters">Строка с именем метода и его параметрами в круглых скобках</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.SetValueByPropertyName``1(System.Object,System.String,System.Object)">
+            <summary>
+            Сохранение значения в свойство по названию и атрибуту
+            </summary>
+            <typeparam name="T">Атрибут свойства</typeparam>
+            <param name="obj">Объект</param>
+            <param name="propertyName">Имя свойства</param>
+            <param name="value">Значение</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.SetValueByPropertyName(System.Object,System.String,System.Object)">
+            <summary>
+            Сохранение значения в свойство по названию и атрибуту
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="propertyName">Имя свойства</param>
+            <param name="value">Значение</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.GetAttribute``1(System.Object)">
+            <summary>
+            Получение атрибута
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="obj">Объект</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.GetEnumValueAttribute``1(System.Object)">
+            <summary>
+            Получение атрибута элемента перечисления
+            </summary>
+            <typeparam name="T">Тип атрибута</typeparam>
+            <param name="enumValue">Значение перечисления</param>
+            <returns>Значение атрибута</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.IsInXmlString(System.Object,System.String,System.String)">
+            <summary>
+            Проверка наличия объекта в XML-строке значений
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="objectsXml">XML-строка, содержащая объекты</param>
+            <param name="tag">XML-тег, содержащий объект</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.NullIf``1(``0,``0)">
+            <summary>
+            Возвращает NULL, если значения равны
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="obj">Объект</param>
+            <param name="value">Значение</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.GetPropertiesInXmlFormat(System.Object,System.Collections.Generic.List{System.String})">
+            <summary>
+            Возвращает XML представление свойств
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="propertiesNames">Список названий свойств</param>
+            <returns>XML представление свойств</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.GetPropertiesInXmlFormat(System.Object,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Возвращает XML представление свойств
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="props">Словарь названий свойств и их алиасов для XML тегов (key - название свйоства, value - название тега в XML, в который будет записано значение свайства)</param>
+            <returns>XML представление свойств</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.IsEmptyList(System.Object)">
+            <summary>
+            Объект является пустым списком
+            </summary>
+            <param name="obj">Объект</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.IsList(System.Object)">
+            <summary>
+            Объект является списком
+            </summary>
+            <param name="obj">Объект</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.ToLongFloatString(System.Object)">
+            <summary>
+            Переводит число с плавающей точкой в экспоненциоальном 
+            формате (типа 1.2345E+05) в читабельную строку
+            </summary>
+            <param name="obj">Объект</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.GetZeros(System.Int32)">
+            <summary>
+            Получить строку нулей
+            </summary>
+            <param name="zeroCount">Число нулей</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.IfNotNull``1(``0,System.Action{``0})">
+            <summary>
+            Выполнение метода, если значение не равно null
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">The object.</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.IsNotNull(System.Object)">
+            <summary>
+            Проверка на не null
+            </summary>
+            <param name="o">Объект</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.IsNull(System.Object)">
+            <summary>
+            Проверка на null
+            </summary>
+            <param name="o">Объект</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.NavigateTo``2(``0,System.Func{``0,``1},``1)">
+            <summary>
+            Выполнение метода с объектом в случае, если объект не равен null
+            </summary>
+            <typeparam name="TSource">Тип входного значения</typeparam>
+            <typeparam name="TResult">Тип выходного значения</typeparam>
+            <param name="source">Входное значение</param>
+            <param name="accessor">Метод</param>
+            <param name="defaultValue">Значение по умолчанию</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.NavigateToMany``2(``0,System.Func{``0,System.Collections.Generic.IEnumerable{``1}},System.Collections.Generic.IEnumerable{``1})">
+            <summary>
+            Выполнение метода с объектом в случае, если объект не равен null, и возвращение списка значений
+            </summary>
+            <typeparam name="TSource">Тип входного значения</typeparam>
+            <typeparam name="TResult">Тип выходного значения</typeparam>
+            <param name="source">Входное значение</param>
+            <param name="accessor">Метод</param>
+            <param name="defaultValue">Значение по умолчанию</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.PrintToOutput(System.Object)">
+            <summary>
+            Выввод объекта в debug
+            </summary>
+            <param name="o">Объект</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.DisposeIfNotEqualTo(System.IDisposable,System.IDisposable)">
+            <summary>
+            Вызов деструктора, если объекты не равны
+            </summary>
+            <param name="obj1">Оригинальный объект</param>
+            <param name="obj2">Объект для сравнения</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.StaticReflection">
+            <summary>
+            Расширение для получения названий членов класса.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StaticReflection.GetMemberName``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            Получить название члена класса.
+            </summary>
+            <typeparam name="T">Тип.</typeparam>
+            <param name="instance">Экземпляр.</param>
+            <param name="expression">Выражение.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StaticReflection.GetMemberName``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            Получить название члена класса.
+            </summary>
+            <typeparam name="T">Тип.</typeparam>
+            <param name="expression">Выражение.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StaticReflection.GetMemberName``1(``0,System.Linq.Expressions.Expression{System.Action{``0}})">
+            <summary>
+            Получить название члена класса.
+            </summary>
+            <typeparam name="T">Тип.</typeparam>
+            <param name="instance">Экземпляр.</param>
+            <param name="expression">Выражение.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StaticReflection.GetMemberName``1(System.Linq.Expressions.Expression{System.Action{``0}})">
+            <summary>
+            Получить название члена класса.
+            </summary>
+            <typeparam name="T">Тип.</typeparam>
+            <param name="expression">Выражение.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StaticReflection.GetMemberName(System.Linq.Expressions.Expression)">
+            <summary>
+            Получить название члена класса.
+            </summary>
+            <param name="expression">Выражение.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StaticReflection.GetMemberName(System.Linq.Expressions.UnaryExpression)">
+            <summary>
+            Получить название члена класса.
+            </summary>
+            <param name="unaryExpression">Выражение.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.StringExtensions">
+            <summary>
+            Расширения для работы со строками
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.StringExtensions.HtmlCommentsRegex">
+            <summary>
+            Regex для html комментариев
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.StringExtensions.HtmlTagsRegex">
+            <summary>
+            Regex для html тэгов
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.StringExtensions.HtmlInputTagsRegex">
+            <summary>
+            Regex для html input-тэгов
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.StringExtensions.SqlFullTextSearchInvalidChars">
+            <summary>
+            Символы, недопустимые в строке запроса при полнотекстовом поискке
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.StringExtensions.XmlSerializationInvalidChars">
+            <summary>
+            Недопустимые символы при инлексировании содержимого сущности
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.StringExtensions.JuridicalInnCheckParams">
+            <summary>
+            Коэффициент для рассчёта проверочной цифры ИНН ЮЛ
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.StringExtensions.PhysicalInnCheckParamsFirst">
+            <summary>
+            Коэффициент для рассчёта первой проверочной цифры ИНН ФЛ
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.StringExtensions.PhysicalInnCheckParamsSecond">
+            <summary>
+            Коэффициент для рассчёта второй проверочной цифры ИНН ФЛ
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Extensions.StringExtensions.ExtraSpacesRegex">
+            <summary>
+            The extra spaces regex
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ToMd5(System.String)">
+            <summary>
+            Возвращает строку преобразованную в MD5
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.VerifyMd5(System.String,System.String)">
+            <summary>
+            Проверка строки на соответствие хэшу MD5
+            </summary>
+            <param name="str">Строка</param>
+            <param name="hash">MD5 хэш</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.SplitEx(System.String,System.String,System.String)">
+            <summary>
+            Разбирает строку на подстроки внутри разделителей (вложенность не поддерживается)
+            </summary>
+            <param name="str">Строка</param>
+            <param name="firstDelimiter">Первый разделитель</param>
+            <param name="secondDelimiter">Второй разделитель</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveBrackets(System.String,System.String)">
+            <summary>
+            Удаляет заданные скобки из строки
+            </summary>
+            <param name="paramsString">Входная строка </param>
+            <param name="brackets">Строка из двух символов - открывающей и закрывающей скобки</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveWhiteSpaces(System.String)">
+            <summary>
+            Удаление пробелов
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.GetParam(System.String,System.Int32,System.String)">
+            <summary>
+            Возвращает подстроку номер ParamNum из строки разделенной разделителями Delimiter. Нумерация с подстрок с 1
+            </summary>
+            <param name="paramsString">Cтрока с параметрами</param>
+            <param name="paramNum">Номер параметра (нумерация с 1)</param>
+            <param name="delimiter">Разделитель</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.AddParam(System.String,System.String,System.String)">
+            <summary>
+            Добавление параметра в строку
+            </summary>
+            <param name="paramsString">Cтрока с параметрами</param>
+            <param name="param">Параметр</param>
+            <param name="delimiter">Разделитель</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveParam(System.String,System.String,System.String)">
+            <summary>
+            Удаление параметра из строки
+            </summary>
+            <param name="paramsString">Cтрока с параметрами</param>
+            <param name="param">Параметр</param>
+            <param name="delimiter">Разделитель</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.SubstringEx(System.String,System.Int32,System.Int32)">
+            <summary>
+            Возвращает подстроку по индексу начального символа подстроки
+            в исходной строке и длине подстроки.
+            </summary>
+            <param name="codeString">Cтрока</param>
+            <param name="startIndex">Индекс начального символа подстроки в исходной строке</param>
+            <param name="length">Длина подстроки</param>
+            <returns>Найденная подстрока</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.Left(System.String,System.Int32)">
+            <summary>
+            Удаление символов слева
+            </summary>
+            <param name="str">Строка</param>
+            <param name="length">Длина</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.TrimLeft(System.String,System.String,System.Boolean)">
+            <summary>
+            Удаление подстроки слева
+            </summary>
+            <param name="str">Строка</param>
+            <param name="subStr">Подстрока</param>
+            <param name="trimAllInclusions">Полностью удалить подстроку</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.Right(System.String,System.Int32)">
+            <summary>
+            Удаление символов справа
+            </summary>
+            <param name="str">Строка</param>
+            <param name="length">Длина</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.NotEmpty(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Не Null и не пустое
+            </summary>
+            <param name="str">Строка</param>
+            <param name="allowWhiteSpaces">Разрешить заполнение пробелами</param>
+            <param name="allowNewLines">Разрешить символы начала новой строки</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.IsNullOrEmpty(System.String)">
+            <summary>
+            Null или пустое
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            Null, пустое или пробелы
+            </summary>
+            <param name="str">Строка</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.UrlEncode(System.String)">
+            <summary>
+            UrlEncode
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.UrlDecode(System.String)">
+            <summary>
+            UrlDecode
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.TrunctateString(System.String,System.Int32,System.String)">
+            <summary>
+            Укоротить длинную строку.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.TruncateString(System.String,System.Int32,System.String)">
+            <summary>
+            Укоротить длинную строку.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ValidateJuridicalInn(System.String)">
+            <summary>
+            Проверить валидность ИНН ЮЛ
+            </summary>
+            <param name="inn">ИНН</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ValidatePhysicalInn(System.String)">
+            <summary>
+            Проверить валидность ИНН ФЛ
+            </summary>
+            <param name="inn">ИНН</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ValidateInn(System.String)">
+            <summary>
+            Проверить валидность ИНН ФЛ или ЮЛ
+            </summary>
+            <param name="inn">ИНН</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ToCurrencyView(System.String,System.String,System.String)">
+            <summary>
+            Приводит строку "12345678,90" к виду "12 345 678,90"
+            </summary>
+            <param name="str">Строка</param>
+            <param name="delimeter">Разделитель</param>
+            <param name="defaultAfterComma">Значение после запятой по умолчанию</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ToValidXmlString(System.String)">
+            <summary>
+            Замещает невалидные в XML символы
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ToValidFileNameString(System.String,System.String)">
+            <summary>
+            Приведение строки к корректному названию файла
+            </summary>
+            <param name="str">Строка</param>
+            <param name="newCharacter">Новый символ, на который производится замена других символов</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ToValidDirectoryNameString(System.String,System.String)">
+            <summary>
+            Приведение строки к корректному названию директории
+            </summary>
+            <param name="str">Строка</param>
+            <param name="newCharacter">Новый символ, на который производится замена других символов</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.Contains(System.String,System.String,System.StringComparison)">
+            <summary>
+            Проверка на вхождение строки в исходную строку
+            </summary>
+            <param name="source">Строка</param>
+            <param name="stringToCheck">Строка, вхождение которой проверяется</param>
+            <param name="comp">Режим проверки</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.Contains(System.String,System.String)">
+            <summary>
+            Проверка на вхождение строки в исходную строку
+            </summary>
+            <param name="source">Строка</param>
+            <param name="stringToCheck">Строка, вхождение которой проверяется</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveHtmlTags(System.String)">
+            <summary>
+            Удаление html тегов
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.AddHtmlNewLines(System.String)">
+            <summary>
+            Замена строковых спец. символов перехода на новую строку на соответсвующие html теги
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveHtmlInputTags(System.String)">
+            <summary>
+            Удаление html input-тегов
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveSpaces(System.String)">
+            <summary>
+            Удаление пробелов
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ToTimeView(System.String)">
+            <summary>
+             Добавляет 0 к исходной строке, если она из одного символа. Для корректного отображения часов минут и секунд
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ToArrayFromXml(System.String,System.String)">
+            <summary>
+            Преобразование строки xml в массив строк
+            </summary>
+            <param name="str">Строка</param>
+            <param name="tagName">Имя тэга</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ExtractNumber(System.String)">
+            <summary>
+            Получение числа из строки
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.GetEncoding(System.String,System.Int32)">
+            <summary>
+            Получение кодировки символов
+            </summary>
+            <param name="str">Строка, представляющая название или идентификатор кодовой страницы</param>
+            <param name="сodePage">Идентификатор кодовой страницы, по умолчанию Cyrillic (DOS).</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.TruncateSpecialSymbols(System.String,System.String,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Заменяет спец.символы в строке
+            </summary>
+            <param name="str">Строка</param>
+            <param name="replacement">Строка, на которую заменяем спец.символы</param>
+            <param name="trim">Удалять ли лишние пробельные символы в начале и конце строки</param>
+            <param name="normalize">Нормализовать ли строку</param>
+            <param name="specialSymbolsPattern">Шаблон спец.символов для поиска в строке регулярным выражением, по умолчанию "soft hyphen"</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.FormatIfNotEmpty(System.String,System.String)">
+            <summary>
+            Получение форматированной строки, если не 
+            </summary>
+            <param name="str">Строка</param>
+            <param name="format">Формат</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.CompareParts(System.String,System.String)">
+            <summary>
+            Сравнивает строки, содержащие коды
+            </summary>
+            <param name="str">Строка</param>
+            <param name="otherString">Другая строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.PaddingLeft(System.String,System.Int32,System.String)">
+            <summary>
+            Отступ слева, заполняемый пробелами
+            </summary>
+            <param name="str">Строка</param>
+            <param name="length">Количество пробелов</param>
+            <param name="space">Символ отступа</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveIndexingInvalidChars(System.String)">
+            <summary>
+            Удаление символов, недопустимых при формировании XML
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ToFullTextSearchValidString(System.String)">
+            <summary>
+            Формирование строки запроса к сервису полнотекстового поиска
+            </summary>
+            <param name="str">Строка запроса</param>
+            <returns>Отфильтрованная строка запроса</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.GetToCompareString(System.String)">
+            <summary>
+            Получить строку для сравнения (только алфавитные символы, приведённые в нижний регистр и цифры)
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.SoftStringEqual(System.String,System.String)">
+            <summary>
+            Мягкое сравнение строк (только алфавитные символы, приведённые в нижний регистр и цифры)
+            </summary>
+            <param name="str1">Строка 1</param>
+            <param name="str2">Строка 2</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemovePunctuation(System.String)">
+            <summary>
+            Удаление пунктуации
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveLineBreaks(System.String,System.String)">
+            <summary>
+            Удаление разделителя строки
+            </summary>
+            <param name="str">Строка</param>
+            <param name="replacementString">Строка замены</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveAllSymbolsExceptNumbers(System.String)">
+            <summary>
+            Удаление всех символов кроме чисел
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveAllSymbolsExceptLetters(System.String)">
+            <summary>
+            Удаление всех символов кроме букв
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveExtraSpaces(System.String)">
+            <summary>
+            Удаление задвоенных пробелов
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Extensions.XmlExtensions">
+            <summary>
+            Расширения для XML
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.XmlExtensions.SerializeToXmlString``1(``0,System.String)">
+            <summary>
+            Получение XML-строки из объекта
+            </summary>
+            <typeparam name="T">Тип объекта</typeparam>
+            <param name="obj">Объект</param>
+            <param name="root">Корневой элемент</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.XmlExtensions.DeserializeFromXmlString``1(System.String,System.String)">
+            <summary>
+            Получение объекта из XML-строки
+            </summary>
+            <typeparam name="T">Тип объекта</typeparam>
+            <param name="str">XML-строка</param>
+            <param name="root">Корневой элемент</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.ActionsHelper">
+            <summary>
+            Класс для работы с выполняемыми делегатами
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ActionsHelper.ExecuteMemoryAware(System.Action,System.Int32,System.Boolean)">
+            <summary>
+            Выполнение метода с определнным количеством попыток в случае превышения оперативной памяти 
+            </summary>
+            <param name="action">Метод</param>
+            <param name="numTries">Количество попыток</param>
+            <param name="shouldExecuteGarbageCollectionAfterAction">Запусть Garbage Collector после выполнения</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ActionsHelper.ExecuteMemoryAware``1(System.Func{``0},System.Int32,System.Boolean)">
+            <summary>
+            Выполнение метода с определнным количеством попыток в случае превышения оперативной памяти 
+            </summary>
+            <typeparam name="TResult">Тип результата</typeparam>
+            <param name="func">Функция</param>
+            <param name="numTries">Количество попыток</param>
+            <param name="shouldExecuteGarbageCollectionAfterAction">Запусть Garbage Collector после выполнения</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ActionsHelper.ExecuteWithEmptyCatch(System.Action)">
+            <summary>
+            Выполнение метода, не вызывающее исключения
+            </summary>
+            <param name="action">Метод</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ActionsHelper.ExecuteWithErrorAction(System.Action,System.Action{System.Exception})">
+            <summary>
+            Выполнение метода с вызвом обработчика в случае выпадения исключения
+            </summary>
+            <param name="action">Метод</param>
+            <param name="errorAction">Метод в случае исключения</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ActionsHelper.Raise(System.EventHandler,System.Object)">
+            <summary>
+            Вызов обработчика события
+            </summary>
+            <param name="eventHandler">Обработчик события</param>
+            <param name="sender">Объект, вызвавший событие</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ActionsHelper.Raise(System.EventHandler,System.Object,System.EventArgs)">
+            <summary>
+            Вызов обработчика события
+            </summary>
+            <param name="eventHandler">Обработчик события</param>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="eventArgs">Аргументы</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ActionsHelper.Raise``1(System.EventHandler{``0},System.Object,``0)">
+            <summary>
+            Вызов обработчика события
+            </summary>
+            <typeparam name="TEventArgs">Тип аргументов</typeparam>
+            <param name="eventHandler">Обработчик события</param>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="eventArgs">Аргументы</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ActionsHelper.TryExecuteManyTimesWithTimeoutOrThrow(System.Action,System.Int32,System.TimeSpan,System.Boolean)">
+            <summary>
+            Попытка выполнения метода несколько раз по таймауту
+            </summary>
+            <param name="action">Метод</param>
+            <param name="numberOfTimes">Количество вызовов</param>
+            <param name="timeout">Таймаут</param>
+            <param name="throwException">Выдавать исключение</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.AssemblyInfoHelper">
+            <summary>
+            Класс для получения информации о сборке
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.AssemblyInfoHelper.GetAssembliesList">
+            <summary>
+            Получение списка используемых программных библиотек
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.AssemblyInfoHelper.GetMainAssemblyCreationDate">
+            <summary>
+            Получение даты создания основной сборки
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.AssemblyInfoHelper.GetMainAssemblyModifyDate">
+            <summary>
+            Получение даты последенего изменения основной сборки
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.AssemblyInfoHelper.GetMainAssemblyVersion">
+            <summary>
+            Получение версии основной сборки
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.AssemblyInfoHelper.GetBuildDate">
+            <summary>
+            Получение даты сборки
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.DateTimeHelper">
+            <summary>
+            Класс для работы с датами
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.DateTimeHelper.SplitDateRange(System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            Разделение диапазона дат на промежутки
+            </summary>
+            <param name="start">Начало диапазона</param>
+            <param name="end">Конец диапазона</param>
+            <param name="dayChunkSize">Длина промежутка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.DateTimeHelper.GetAllWeeks(System.Int32)">
+            <summary>
+            Получение списка всех недель в году
+            </summary>
+            <param name="year">Год</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.DateTimeHelper.GetAllWeeksIso(System.Int32)">
+            <summary>
+            Получение списка всех недель в году (Iso)
+            </summary>
+            <param name="year">Год</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.EnumNamesHelper">
+            <summary>
+            Класс для получения наименований значений инумератора
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.GetDescription(System.Enum,System.Boolean)">
+            <summary>
+            Получение описания элемента из инумератора
+            </summary>
+            <param name="item">Элемент</param>
+            <param name="toLower">Привести в нижний регистр</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.GetShortDescription(System.Enum,System.Boolean)">
+            <summary>
+            Получение сокращенного описания элемента из инумератора
+            </summary>
+            <param name="item">Элемент</param>
+            <param name="toLower">Привести в нижний регистр</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.GetValues``1">
+            <summary>
+            Возвращает список элементов из инумератора
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.Get(System.Enum)">
+            <summary>
+            Получение названия элемента инумератора
+            </summary>
+            <param name="item">Элемент инумератора</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.Get(System.Enum,System.String)">
+            <summary>
+            Получение названия элемента инумератора (или значение по умолчанию, если элемент равен null)
+            </summary>
+            <param name="item">Элемент инумератора</param>
+            <param name="defaultValue">Значение по умолчанию</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.GetEnumByDescription``1(System.String,System.StringComparison)">
+            <summary>
+            Получение значения инумератора по описанию
+            </summary>
+            <typeparam name="T">Тип инумератора</typeparam>
+            <param name="description">Описание</param>
+            <param name="comparisonType">Способ сравнения</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.GetEnumByDescription(System.String,System.Enum,System.StringComparison)">
+            <summary>
+            Получение значения инумератора по описанию
+            </summary>
+            <param name="description">Описание</param>
+            <param name="sampleEnum">Образец Enum</param>
+            <param name="comparisonType">Способ сравнения</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.GetEnumByName``1(System.String,System.StringComparison)">
+            <summary>
+            Получение значения инумератора по названию
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="enumName">Название значения инумератора</param>
+            <param name="comparisonType">Способ сравнения</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.ReadDescription(System.Enum)">
+            <summary>
+            Получение описания элемента из инумератора 
+            </summary>
+            <param name="item">Элемент</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.ReadFullAndShortDescription(System.Enum)">
+            <summary>
+            Получение полного и сокращенного описаний элемента из инумератора 
+            </summary>
+            <param name="item">Элемент</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.EnumNamesHelper.Get(System.Diagnostics.TraceEventType)">
+            <summary>
+            Получение названия критичности
+            </summary>
+            <param name="severity">Критичность</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.ListHelper">
+            <summary>
+            Класс для работы со списками
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ListHelper.SplitList``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+            Разделение списка на подсписки
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="list">Список</param>
+            <param name="subListSize">Размер подсписка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ListHelper.GetAllCombinations``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Получение всех комбинаций из элементов
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="list">Список элементов</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.ListSerializationHelper">
+            <summary>
+            Класс для сериализации списков
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ListSerializationHelper.WriteXml``1(System.Collections.Generic.IList{``0},System.Xml.XmlWriter)">
+            <summary>
+            Сериализовать коллекцию через XmlWriter
+            </summary>
+            <typeparam name="T">Тип элементов коллекции</typeparam>
+            <param name="collection">Коллекция</param>
+            <param name="writer">Генератор xml</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ListSerializationHelper.ReadXml``1(System.Collections.Generic.IList{``0},System.Xml.XmlReader)">
+            <summary>
+            Десериализовать коллекцию из xml
+            </summary>
+            <typeparam name="T">Тип элементов коллекции</typeparam>
+            <param name="collection">Коллекция</param>
+            <param name="reader">Читалка xml</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ListSerializationHelper.FormElementName(System.Int32)">
+            <summary>
+            Формирование имени элемента
+            </summary>
+            <param name="elementPosition">Позиция элемента</param>
+            <returns>Имя элемента</returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.ReflectionHelper">
+            <summary>
+            Класс для работы с рефлексией
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ReflectionHelper.GetTypesDerivedFrom(System.Type)">
+            <summary>
+            Получение массива наследуемых классов
+            </summary>
+            <param name="baseType">Базовый тип</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.ThrowHelper">
+            <summary>
+            Класс для работы с исключениями
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ThrowHelper.CheckNotNull``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Проверка, что выражение не null
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="propertyExpression">Выражение</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ThrowHelper.CheckNotNull(System.Object,System.String)">
+            <summary>
+            Проверка, что аргумент не null
+            </summary>
+            <param name="arg">Аргумент</param>
+            <param name="argName">Название аргумента</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ThrowHelper.CheckNotNullOrWhiteSpace(System.String,System.String)">
+            <summary>
+            Проверка на то, что аргумент не null или не пробел
+            </summary>
+            <param name="arg">Аргумент</param>
+            <param name="argName">Название аргумента</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ThrowHelper.CheckNull(System.Object,System.String)">
+            <summary>
+            Проверка, что аргумент null
+            </summary>
+            <param name="arg">Аргумент</param>
+            <param name="argName">Название аргумента</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ThrowHelper.CheckTrue(System.Boolean,System.String)">
+            <summary>
+            Проверка, что аргумент true
+            </summary>
+            <param name="condition">Условие</param>
+            <param name="errorMessage">Сообщение об ошибке</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ThrowHelper.CheckType(System.Object,System.String,System.Type)">
+            <summary>
+            Проверка типа
+            </summary>
+            <param name="arg">Аргумент</param>
+            <param name="argName">Название аргумента</param>
+            <param name="desiredType">Ожидаемый тип</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.ThrowHelper.WrongTypeException">
+            <summary>
+            Исключение для некорректного типа
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ThrowHelper.WrongTypeException.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ThrowHelper.WrongTypeException.#ctor(System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="message">Сообщение</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.UrlHelper">
+            <summary>
+            Класс для работы с Url
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.UrlHelper.CombineUrls(System.String,System.String)">
+            <summary>
+            Объединение путей
+            </summary>
+            <param name="baseUrl">Базовый Url</param>
+            <param name="relativeUrl">Относительный Url</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.UrlHelper.GenerateArgumentsString(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Генерация строки аргументов для http-запроса
+            </summary>
+            <param name="arguments">Аргументы</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.XmlHelper">
+            <summary>
+            Класс для работы с Xml
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.Serialize``1(``0)">
+            <summary>
+            Сериализация строки
+            </summary>
+            <typeparam name="T">Тип объекта</typeparam>
+            <param name="value">Сериализуемый объект</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.Serialize``1(``0,System.Text.Encoding,System.Boolean,System.String)">
+            <summary>
+            Сериализация строки
+            </summary>
+            <typeparam name="T">Тип объекта</typeparam>
+            <param name="value">Сериализуемый объект</param>
+            <param name="encoding">Кодировка</param>
+            <param name="stripIllegalCharacters">Удалять запрещенные символы?</param>
+            <param name="xmlVersion">Версия XML</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.Deserialize``1(System.String)">
+            <summary>
+            Десериализация Xml-строки в объект
+            </summary>
+            <typeparam name="T">Тип объекта</typeparam>
+            <param name="xml">Xml-строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.GenerateDocument(System.String)">
+            <summary>
+            Генерация Xml документа
+            </summary>
+            <param name="xml">Xml</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.OpenDocument(System.String)">
+            <summary>
+            Генерация Xml документа из существующего файла
+            </summary>
+            <param name="path">Путь к файлу</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.OpenDocument(System.IO.StringReader)">
+            <summary>
+            Генерации Xml документа из потока
+            </summary>
+            <param name="stream">Поток</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.GetAttributes(System.Xml.XmlDocument)">
+            <summary>
+            Получение аттрибутов корневого узла Xml документа
+            </summary>
+            <param name="xmlDoc">XmlDocument объект</param>
+            <returns>XmlAttributeCollection объект с аттрибутами узла</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.GetAttributes(System.String)">
+            <summary>
+            Получение аттрибутов Xml документа
+            </summary>
+            <param name="xmlText">Строка Xml</param>
+            <returns>XmlAttributeCollection объект с аттрибутами узла</returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.GetAttribute(System.String,System.String)">
+            <summary>
+            Получение определенного аттрибута Xml документа
+            </summary>
+            <param name="xmlText">Xml документ в виде текста</param>
+            <param name="attributeName">Название аттрибута</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.RemoveAttributes(System.String,System.String[])">
+            <summary>
+            Функция удаления аттрибутов Xml документа
+            </summary>
+            <param name="xmlText">Xml документ</param>
+            <param name="attributeName">Список аттрибутов</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.GetXmlNodes(System.String,System.String)">
+            <summary>
+            Получение Xml-узлов по названию
+            </summary>
+            <param name="xmlString">Xml</param>
+            <param name="xpath">Xpath</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.XmlHelper.GetFirstOrDefaultXmlNode(System.String,System.String)">
+            <summary>
+            Получение Xml-узлов по названию
+            </summary>
+            <param name="xmlString">Xml</param>
+            <param name="xpath">Xpath</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Helpers.ZipHelper">
+            <summary>
+            Класс для работы с zip-архивами
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.ZipHelper.Extract(System.IO.Stream,System.String)">
+            <summary>
+            Извлекает файлы в указанную папку
+            </summary>
+            <param name="sourceStream">Поток с архивом</param>
+            <param name="path">Путь к папке</param>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.DirectoryHelper">
+            <summary>
+            Класс для работы с директориями файловой системы
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.DirectoryHelper.CreateDirectoryIfNotExists(System.String)">
+            <summary>
+            Создание директории, если она не существует
+            </summary>
+            <param name="path">Путь к директории</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.DirectoryHelper.CreateSubdirectoriesRecursively(System.String)">
+            <summary>
+            Рекурсивное создание поддиректорий
+            </summary>
+            <param name="path">Путь к директории</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.DirectoryHelper.DeleteDirectoryIfEmpty(System.String)">
+            <summary>
+            Удаление директории, если он пустая
+            </summary>
+            <param name="path">Путь к директории</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.DirectoryHelper.IsDirectoryEmpty(System.String)">
+            <summary>
+            Проверка на то, что директория пуста
+            </summary>
+            <param name="directory">Путь к директории</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.DirectoryHelper.MoveAllContents(System.String,System.String,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Перемещение содержимого директории
+            </summary>
+            <param name="sourceDirectory">начальная директория</param>
+            <param name="targetDirectory">Конечная директория</param>
+            <param name="cancellationToken">Токен отмены</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.DirectoryHelper.DeleteRecursively(System.String,System.Boolean)">
+            <summary>
+            Рекурсивное удаление директории и её содержимого
+            </summary>
+            <param name="directory">Директория</param>
+            <param name="ignoreErrors">Игнорировать ошибки при удалении</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.DirectoryHelper.GetFilteredFileList(System.String,System.String)">
+            <summary>
+            Получение отфильтрованного по расширениям списка файлов в директории
+            </summary>
+            <param name="path">Путь</param>
+            <param name="extensionFilters">Фильтры расширений</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.DirectoryHelper.DoesExtensionFilterMatches(System.String,System.String)">
+            <summary>
+            Проверка на то, что путь удовлетворяет фильтру
+            </summary>
+            <param name="path">Путь</param>
+            <param name="extensionFilters">Фильтр </param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.EncodedStringWriter">
+            <summary>
+            Расширение для StringWriter содержащее кодировку
+            </summary>
+            <seealso cref="T:System.IO.StringWriter" />
+        </member>
+        <member name="P:Ak.Framework.Core.IO.EncodedStringWriter.Encoding">
+            <summary>
+            Кодировка
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.EncodedStringWriter.#ctor(System.Text.StringBuilder,System.Text.Encoding)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="stringBuilder">StringBuilder</param>
+            <param name="encoding">Кодировка</param>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.Enums.PathTargetTypes">
+            <summary>
+            Типы объектов в файловой системе
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.IO.Enums.PathTargetTypes.Unknown">
+            <summary>
+            Не известно
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.IO.Enums.PathTargetTypes.File">
+            <summary>
+            Файл
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.IO.Enums.PathTargetTypes.Directory">
+            <summary>
+            Директория
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.Extensions.FileInfoExtensions">
+            <summary>
+            Расширения для FileInfo
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.Extensions.FileInfoExtensions.OpenReadLocked(System.IO.FileInfo)">
+            <summary>
+            Открытие файла на чтение
+            </summary>
+            <param name="file">Файл</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.Extensions.FileInfoExtensions.OpenWriteLocked(System.IO.FileInfo)">
+            <summary>
+            Открытие файла на запись
+            </summary>
+            <param name="file">Файл</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.Extensions.PathExtensions">
+            <summary>
+            Расширения для работы с путями
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.Extensions.PathExtensions.ReplaceExtension(System.String,System.String)">
+            <summary>
+            Замена расширения
+            </summary>
+            <param name="sourcePath">Исходный путь</param>
+            <param name="targetExtension">Расширение конеченое</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.FileHelper">
+            <summary>
+            Класс для работы с файлами
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileHelper.CheckFileCanBeCreatedOrRewritten(System.String)">
+            <summary>
+            Проверка возможности создания файла
+            </summary>
+            <param name="filePath">Путь к файлу</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileHelper.IsFileLocked(System.IO.FileInfo)">
+            <summary>
+            Проверка на то, что файл заблокирован
+            </summary>
+            <param name="file">Файл</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.FileSystemWatchers.Enums.FileSystemWatcherConnectionStates">
+            <summary>
+            Состояния соединения 
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.IO.FileSystemWatchers.Enums.FileSystemWatcherConnectionStates.Connected">
+            <summary>
+            Соединение с файловой системой установлено
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.IO.FileSystemWatchers.Enums.FileSystemWatcherConnectionStates.Disconnected">
+            <summary>
+            Соединение с файловой системой нарушено
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.IO.FileSystemWatchers.Enums.FileSystemWatcherConnectionStates.Reconnected">
+            <summary>
+            Псевдосостостояние для индикации того, что наблюдатель файловой системы был пересоединен.
+            (Наблюдатель никогда не будет в данном состоянии)
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.FileSystemWatchers.EventArgs.ConnectionStateChangedEventArgs">
+            <summary>
+            Аргументы события изменения состояния наблюдателя файловой системы
+            </summary>
+            <seealso cref="T:System.EventArgs" />
+        </member>
+        <member name="P:Ak.Framework.Core.IO.FileSystemWatchers.EventArgs.ConnectionStateChangedEventArgs.ConnectionState">
+            <summary>
+            Состояние соединения
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.EventArgs.ConnectionStateChangedEventArgs.#ctor(Ak.Framework.Core.IO.FileSystemWatchers.Enums.FileSystemWatcherConnectionStates)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="connectionState">Состояние соединения</param>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher">
+            <summary>
+            Наблюдатель событий файловой системы.
+            Создает события при потере подключения к источнику.
+            </summary>
+            <seealso cref="T:System.IO.FileSystemWatcher" />
+        </member>
+        <member name="F:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.DefaultCheckConnectionIntervalSeconds">
+            <summary>
+            Количество секунд, через которое выполняется проверка соединения (по умолчанию)
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher._lock">
+            <summary>
+            Объект блокировки
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher._timer">
+            <summary>
+            Таймер
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher._checkConnectionInterval">
+            <summary>
+            Интервал проверки соединения
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.ConnectionState">
+            <summary>
+            Состояние соединения
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.InStateCounter">
+            <summary>
+            Количество итераций, в котором объект остается в текущем состоянии
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.CheckConnectionInterval">
+            <summary>
+            Интервал проверки соединения
+            </summary>
+        </member>
+        <member name="E:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.ConnectionStateChanged">
+            <summary>
+            Событие, возникающее, если теряется соединение с сетевой директории или происходит пересоединение
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.#ctor(System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="path">Путь к директории для мониторинга</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.#ctor(System.String,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="path">Путь к директории для мониторинга</param>
+            <param name="filter">Фильтр названия файлов</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.#ctor(System.TimeSpan)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="checkConnectionInterval">Интервал проверки соединения</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.#ctor(System.TimeSpan,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="checkConnectionInterval">Интервал проверки соединения</param>
+            <param name="path">Путь к директории для мониторинга</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.#ctor(System.TimeSpan,System.String,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="checkConnectionInterval">Интервал проверки соединения</param>
+            <param name="path">Путь к директории для мониторинга</param>
+            <param name="filter">Фильтр названия файлов</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.Dispose(System.Boolean)">
+            <summary>
+            Деструктор
+            </summary>
+            <param name="disposing">Признак освобождения ресурсов</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.Initialize">
+            <summary>
+            Инициализация объектов
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.Initialize(System.TimeSpan)">
+            <summary>
+            Инициализация объектов
+            </summary>
+            <param name="checkConnectionInterval">Интервал проверки соединения</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.CheckConnection">
+            <summary>
+            Проверка соединения
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.SetConnectionState(Ak.Framework.Core.IO.FileSystemWatchers.Enums.FileSystemWatcherConnectionStates)">
+            <summary>
+            Установка состояния соединения
+            </summary>
+            <param name="newState">Новое состояние</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.FileSystemWatchers.NetFileSystemWatcher.GetTimerInterval(Ak.Framework.Core.IO.FileSystemWatchers.Enums.FileSystemWatcherConnectionStates)">
+            <summary>
+            Получение интервала таймера
+            </summary>
+            <param name="newState">Новое состояние</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.PathHelper">
+            <summary>
+            Класс для работы с путями в файловой системе
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.PathHelper.Exists(System.String)">
+            <summary>
+            Проверка на то, что путьт в файловой системе существует
+            </summary>
+            <param name="path">Путь</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.PathHelper.GetPathTargetType(System.String)">
+            <summary>
+            Получение типа объета файловой системы по пути
+            </summary>
+            <param name="path">Путь</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.PathHelper.IsExternal(System.String)">
+            <summary>
+            Проверка на то, что указан внешний путь (например, http url)
+            </summary>
+            <param name="path">Путь</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.PathHelper.ThrowIfInvalid(System.String)">
+            <summary>
+            Вызов исключения, если путь некорректен
+            </summary>
+            <param name="path">Путь</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.PathHelper.GetFilePathForCurrentAppDomainBaseDirectory(System.String)">
+            <summary>
+            Объединение относительного пути и пути расположения сборки
+            </summary>
+            <param name="relativePath">Относительный путь</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.PathHelper.IsPathValid(System.String)">
+            <summary>
+            Проверка на то, что путь файловой системы указан корректно
+            </summary>
+            <param name="path">Путь</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.IO.StreamHelper">
+            <summary>
+            Класс для работы с потоками
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.StreamHelper.ReadByteArray(System.IO.Stream)">
+            <summary>
+            Преобразование потока в битовый массив
+            </summary>
+            <param name="s">Поток</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.StreamHelper.CopyStream(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            Копирование потока
+            </summary>
+            <param name="input">Входной поток</param>
+            <param name="output">Выходной поток</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.StreamHelper.WriteToFileSafely(System.IO.Stream,System.String)">
+            <summary>
+            Безопасная запись в файл
+            </summary>
+            <param name="inputStream">Входной поток</param>
+            <param name="targetPath">Путь</param>
+        </member>
+        <member name="M:Ak.Framework.Core.IO.StreamHelper.CreateStream(System.String)">
+            <summary>
+            Создание потока из строки
+            </summary>
+            <param name="inputString">Входящая строка</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Models.UserFriendlyFileSize">
+            <summary>
+            Человекочитабельный размер файла
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Models.UserFriendlyFileSize.SizeValue">
+            <summary>
+            Размер
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Models.UserFriendlyFileSize.SizeUnit">
+            <summary>
+            Единица измерения
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Models.UserFriendlyFileSize.#ctor(System.Double,Ak.Framework.Core.Enums.MemoryUnits)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="sizeValue">Размер</param>
+            <param name="sizeUnit">Единица измерения</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Models.UserFriendlyFileSize.ToString">
+            <summary>
+            Приведение к строковому пердставлению
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Core.Models.Week">
+            <summary>
+            Неделя
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Models.Week.WeekStartDate">
+            <summary>
+            Дата начала недели
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Models.Week.WeekEndDate">
+            <summary>
+            Дата окончания недели
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Core.Models.Week.WeekNumber">
+            <summary>
+            Номер недели
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Models.Week.#ctor(System.DateTime,System.DateTime)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="weekStartDate">Дата начала недели</param>
+            <param name="weekEndDate">Дата окончания недели</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Utils.GarbageCollector">
+            <summary>
+            Класс для работы со сборщиком мусора
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Utils.GarbageCollector.Collect(System.Boolean)">
+            <summary>
+            Сбор мусора
+            </summary>
+            <param name="x86Only">Применить только для x86</param>
+        </member>
+        <member name="T:Ak.Framework.Core.Utils.PerformanceMonitor">
+            <summary>
+            Монитор производительности
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Utils.PerformanceMonitor._message">
+            <summary>
+            Сообщение
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Utils.PerformanceMonitor._messageAction">
+            <summary>
+            Действие
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Utils.PerformanceMonitor._stopwatch">
+            <summary>
+            Таймер
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Utils.PerformanceMonitor.#ctor(System.String,System.Action{System.String})">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="messageAction">Действие</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Utils.PerformanceMonitor.Dispose">
+            <summary>
+            Деструктор
+            </summary>
+        </member>
+    </members>
+</doc>

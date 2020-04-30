@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ak.Framework.Morphology</name>
+    </assembly>
+    <members>
+        <member name="T:Ak.Framework.Morphology.Decliners.FioDecliner">
+            <summary>
+            Класс для склонения ФИО
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Decliners.FioDecliner._lastNamesCache">
+            <summary>
+            Словарь исключений склонений фамилий
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Decliners.FioDecliner._firstNamesCache">
+            <summary>
+            Словарь исключений склонений имен
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Decliners.FioDecliner._middleNamesCache">
+            <summary>
+            Словарь исключений склонений отчеств
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="lastNamesForms">Строка со склонениями фамилий (В строке падежи расположены через пробел, новые фамилии через перенос строки)</param>
+            <param name="firstNamesForms">Строка со склонениями имен (В строке падежи расположены через пробел, новые имена через перенос строки)</param>
+            <param name="middleNamesForms">Строка со склонениями отчеств (В строке падежи расположены через пробел, новые отчества через перенос строки)</param>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineFio(System.String,Ak.Framework.Morphology.Enums.WordsForms,Ak.Framework.Core.Enums.Genders,System.Boolean)">
+            <summary>
+            Склонение ФИО
+            </summary>
+            <param name="fio">ФИО</param>
+            <param name="wordsForm">Падеж</param>
+            <param name="gender">Пол</param>
+            <param name="shorten">Сокращенная форма</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineFamilyName(System.String,Ak.Framework.Morphology.Enums.WordsForms,Ak.Framework.Core.Enums.Genders,System.Boolean)">
+            <summary>
+            Склонение фамилии
+            </summary>
+            <param name="familyName">Фамилия</param>
+            <param name="wordsForm">Падеж</param>
+            <param name="gender">Пол</param>
+            <param name="shorten">Сокращенная форма</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineName(System.String,Ak.Framework.Morphology.Enums.WordsForms,Ak.Framework.Core.Enums.Genders,System.Boolean)">
+            <summary>
+            Склонение имени
+            </summary>
+            <param name="name">Имя</param>
+            <param name="wordsForm">Падеж</param>
+            <param name="gender">Пол</param>
+            <param name="shorten">Сокращенная форма</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineMiddleName(System.String,Ak.Framework.Morphology.Enums.WordsForms,Ak.Framework.Core.Enums.Genders,System.Boolean)">
+            <summary>
+            Склонение отчества
+            </summary>
+            <param name="middleName">Фамилия</param>
+            <param name="wordsForm">Падеж</param>
+            <param name="gender">Пол</param>
+            <param name="shorten">Сокращенная форма</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.Decline(System.String,System.String,System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Склонение ФИО
+            </summary>
+            <param name="declinedSurname">Фамилия</param>
+            <param name="declinedName">Имя</param>
+            <param name="declinedMiddleName">Отчество</param>
+            <param name="caseNumber">Падеж</param>
+            <param name="gender">Пол</param>
+            <param name="shorten">Сокращенно</param>
+            <returns>Возвращает массив из трех элементов [Фамилия, Имя, Отчество]</returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.Decline(System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Склонение ФИО в указанном падеже
+            </summary>
+            <param name="fio">ФИО</param>
+            <param name="caseNumber"></param>
+            <param name="gender">Пол</param>
+            <param name="shorten"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineSurnameGenitive(System.String,System.Boolean)">
+            <summary>
+            Родительный, Кого? Чего? (нет)
+            </summary>
+            <param name="surname"></param>
+            <param name="isFeminine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineSurnameDative(System.String,System.Boolean)">
+            <summary>
+            Дательный, Кому? Чему? (дам)
+            </summary>
+            <param name="surname"></param>
+            <param name="isFeminine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineSurnameAccusative(System.String,System.Boolean)">
+            <summary>
+            Винительный, Кого? Что? (вижу)
+            </summary>
+            <param name="surname"></param>
+            <param name="isFeminine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineSurnameInstrumental(System.String,System.Boolean)">
+            <summary>
+            Творительный, Кем? Чем? (горжусь)
+            </summary>
+            <param name="surname"></param>
+            <param name="isFeminine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineSurnamePrepositional(System.String,System.Boolean)">
+            <summary>
+            Предложный, О ком? О чем? (думаю)
+            </summary>
+            <param name="surname"></param>
+            <param name="isFeminine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DiclineName(System.String,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Склонение имени
+            </summary>
+            <param name="name">Имя</param>
+            <param name="caseNumber">Вид падежа</param>
+            <param name="isFeminine">Является ли женского рода</param>
+            <param name="shorten">Признак необходимости сокращенного варианта имени (иницал)</param>
+            <returns>Склоненное имя</returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineNameGenitive(System.String,System.Boolean)">
+            <summary>
+            Родительный, Кого? Чего? (нет)
+            </summary>
+            <param name="name">Имя</param>
+            <param name="isFeminine">Является ли женского рода</param>
+            <returns>Имя в родительсном падеже</returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineNameDative(System.String,System.Boolean)">
+            <summary>
+            Дательный, Кому? Чему? (дам)
+            </summary>
+            <param name="name">Имя</param>
+            <param name="isFeminine">Является ли женского рода</param>
+            <returns>Имя в дательном падеже</returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineNameAccusative(System.String,System.Boolean)">
+            <summary>
+            Винительный, Кого? Что? (вижу)
+            </summary>
+            <param name="name">Имя</param>
+            <param name="isFeminine">Является ли женского рода</param>
+            <returns>Имя в винительном падеже</returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineNameInstrumental(System.String,System.Boolean)">
+            <summary>
+            Творительный, Кем? Чем? (горжусь)
+            </summary>
+            <param name="name">Имя</param>
+            <param name="isFeminine">Является ли женского рода</param>
+            <returns>Имя в творительном падеже</returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclineNamePrepositional(System.String,System.Boolean)">
+            <summary>
+            Предложный, О ком? О чем? (думаю)
+            </summary>
+            <param name="name">Имя</param>
+            <param name="isFeminine">Является ли женского рода</param>
+            <returns>Имя в предложном падеже</returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclinePatronymic(System.String,System.Int32,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Склонение отчества
+            </summary>
+            <param name="patronymic">Отчество</param>
+            <param name="caseNumber">Вид падежа</param>
+            <param name="patronymicAfter"></param>
+            <param name="isFeminine">Является ли женского рода</param>
+            <param name="shorten">Признак необходимости сокращенного варианта имени (иницал)</param>
+            <returns>Склоненное отчество</returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclinePatronymicGenitive(System.String,System.String,System.Boolean)">
+            <summary>
+             Родительный, Кого? Чего? (нет)
+             </summary>
+             <param name="Name"></param>
+             <param name="isFeminine"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclinePatronymicDative(System.String,System.String,System.Boolean)">
+            <summary>
+            Дательный, Кому? Чему? (дам)
+            </summary>
+            <param name="Name"></param>
+            <param name="IsFeminine"></param>
+            <param name="Shorten"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclinePatronymicAccusative(System.String,System.String,System.Boolean)">
+            <summary>
+            Винительный, Кого? Что? (вижу)
+            </summary>
+            <param name="Name"></param>
+            <param name="isFeminine"></param>
+            <param name="Shorten"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclinePatronymicInstrumental(System.String,System.String,System.Boolean)">
+            <summary>
+            Творительный, Кем? Чем? (горжусь)
+            </summary>
+            <param name="Name"></param>
+            <param name="isFeminine"></param>
+            <param name="Shorten"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.FioDecliner.DeclinePatronymicPrepositional(System.String,System.String,System.Boolean)">
+            <summary>
+            Творительный, Кем? Чем? (горжусь)
+            </summary>
+            <param name="Name"></param>
+            <param name="isFeminine"></param>
+            <param name="Shorten"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Morphology.Decliners.PositionsDecliner">
+            <summary>
+            Класс для склонения должностей 
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Decliners.PositionsDecliner.Cashe">
+            <summary>
+            Словарь склонений должностей
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Morphology.Decliners.PositionsDecliner.PositionsDecliners">
+            <summary>
+            Словарь склонений родительного падежа должностей
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.PositionsDecliner.#cctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.PositionsDecliner.Decline(System.String,Ak.Framework.Morphology.Enums.WordsForms,System.Boolean)">
+            <summary>
+            Склонение
+            </summary>
+            <param name="position">Должность</param>
+            <param name="wordsForm">Падеж</param>
+            <param name="isToLowerCase">Приводить к нижнему регистру</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Morphology.Decliners.WordForms">
+            <summary>
+            Класс для работы с падежами слова
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Morphology.Decliners.WordForms.Nominative">
+            <summary>
+            Именительный падеж
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Morphology.Decliners.WordForms.Genitive">
+            <summary>
+            Родительный падеж
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Morphology.Decliners.WordForms.Dative">
+            <summary>
+            Дательный падеж
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Morphology.Decliners.WordForms.Accusative">
+            <summary>
+            Винительный падеж
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Morphology.Decliners.WordForms.Instrumental">
+            <summary>
+            Творительный падеж
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Morphology.Decliners.WordForms.Prepositional">
+            <summary>
+            Предложный падеж
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.WordForms.#ctor(System.Collections.Generic.IList{System.String})">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="wordForms">Падежи слова</param>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.WordForms.GetWordForm(Ak.Framework.Morphology.Enums.WordsForms)">
+            <summary>
+            Получение слова в заданном падеже
+            </summary>
+            <param name="wordsForm">Падеж</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Decliners.WordForms.CreateWordFormsCache(System.String)">
+            <summary>
+            Создание словаря с падежами слов
+            </summary>
+            <param name="resource">Строка с падежами слов</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Morphology.Enums.TransliterationTypes">
+            <summary>
+            Стандарты транслитерации
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Enums.TransliterationTypes.Gost">
+            <summary>
+            ГОСТ 16876-71
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Enums.TransliterationTypes.Iso">
+            <summary>
+            ISO 9-95
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Morphology.Enums.WordsForms">
+            <summary>
+            Падежи слов
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Enums.WordsForms.Nominative">
+            <summary>
+            Именительный падеж
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Enums.WordsForms.Genitive">
+            <summary>
+            Родительный падеж
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Enums.WordsForms.Dative">
+            <summary>
+            Дательный падеж
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Enums.WordsForms.Accusative">
+            <summary>
+            Винительный падеж
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Enums.WordsForms.Instrumental">
+            <summary>
+            Творительный падеж
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Enums.WordsForms.Prepositional">
+            <summary>
+            Предложный падеж
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Morphology.Extensions.DecimalExtensions">
+            <summary>
+            Расширения для работы с числовыми значениями
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Extensions.DecimalExtensions.ToRurText(System.Decimal,System.Boolean)">
+            <summary>
+            Преобразование для рублей 
+            </summary>
+            <param name="money">Денежное значение</param>
+            <param name="useCoins">Включать копейки</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Extensions.DecimalExtensions.ToUsdText(System.Decimal,System.Boolean)">
+            <summary>
+            Преобразование для долларов
+            </summary>
+            <param name="money">Денежное значение</param>
+            <param name="useCoins">Включать центы</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Extensions.DecimalExtensions.ConvertToCurrencyString(System.Decimal,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Преобразование числа в текстовое представление с добавлением валюты
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Morphology.Extensions.StringExtensions">
+            <summary>
+            Расширения для работы со строками
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Extensions.StringExtensions.Transliterate(System.String)">
+            <summary>
+            Возвращает транслитерированную (переведенную из кириллицы в латиницу) строку
+            </summary>
+            <param name="str">Входная строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Extensions.StringExtensions.ToRurText(System.String)">
+            <summary>
+            Преобразование строкового представления числа в текстовое представление с добавлением рублей
+            </summary>
+            <param name="str">Входная строка</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Morphology.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Morphology.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Morphology.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Morphology.Properties.Resources.positions_forms">
+             <summary>
+               Looks up a localized string similar to академик	академика
+            врач	врача
+            временный	временного
+            генеральный	генерального
+            глава	главы
+            главный	главного
+            директор	директора
+            доктор	доктора
+            заведующий	заведующего
+            заведующая	заведующей
+            заместитель	заместителя
+            индивидуальный	индивидуального
+            инженер	инженера
+            исполнительный	исполнительного
+            исполняющий	исполняющего
+            исполняющая	исполняющей
+            коммерческий	коммерческого
+            конструктор	конструктора
+            консультант	консультанта
+            менеджер	менеджера
+            научный	научного
+            начальник	начальника
+            ответственный	ответс [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="T:Ak.Framework.Morphology.Transliteration">
+            <summary>
+            Класс для транслитерации строк
+            </summary>
+        </member>
+    </members>
+</doc>

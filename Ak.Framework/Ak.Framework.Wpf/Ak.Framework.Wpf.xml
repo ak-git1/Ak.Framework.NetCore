@@ -1,0 +1,1755 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ak.Framework.Wpf</name>
+    </assembly>
+    <members>
+        <member name="T:Ak.Framework.Wpf.Binding.DataGridColumnsBehavior">
+            <summary>
+            Привязываемые столбцы в DataGrid
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Binding.DataGridColumnsBehavior.BindableColumnsProperty">
+            <summary>
+            Привязываемые столбцы
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Binding.DataGridColumnsBehavior.SetBindableColumns(System.Windows.DependencyObject,System.Collections.ObjectModel.ObservableCollection{System.Windows.Controls.DataGridColumn})">
+            <summary>
+            Установка привязанных столбцов
+            </summary>
+            <param name="element">Элемент</param>
+            <param name="value">Значение</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Binding.DataGridColumnsBehavior.GetBindableColumns(System.Windows.DependencyObject)">
+            <summary>
+            Получение привязанные столбцов
+            </summary>
+            <param name="element">Элемент</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Binding.EventBindingExtension">
+            <summary>
+            Extension for working with events binding
+            Class was taken from https://github.com/JonghoL/EventBindingMarkup
+            </summary>
+            <seealso cref="T:System.Windows.Markup.MarkupExtension" />
+        </member>
+        <member name="P:Ak.Framework.Wpf.Binding.EventBindingExtension.Command">
+            <summary>
+            Command
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.Binding.EventBindingExtension.CommandParameter">
+            <summary>
+            Command parameter
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Commands.Interfaces.INotifyCommand">
+            <summary>
+            Интерфейс команды с нотификацией
+            </summary>
+        </member>
+        <member name="E:Ak.Framework.Wpf.Commands.Interfaces.INotifyCommand.Executed">
+            <summary>
+            Событие исполнения
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Commands.Interfaces.INotifyCommand.NotifyCanExecuteChanged">
+            <summary>
+            Нотификация о том, что изменилась проверка возможности исполнения
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Commands.NotifyCommand">
+            <summary>
+            Команда нотификации
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Commands.Interfaces.INotifyCommand" />
+        </member>
+        <member name="F:Ak.Framework.Wpf.Commands.NotifyCommand._canExecute">
+            <summary>
+            Функция проверка возможности исполнения
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Commands.NotifyCommand._exceptionAction">
+            <summary>
+            Действие при исключении
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Commands.NotifyCommand._execute">
+            <summary>
+            Основной обработчик действия
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Commands.NotifyCommand.Logger">
+            <summary>
+            Логгер
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Commands.NotifyCommand.CommandException">
+            <summary>
+            Исключение при работе команды
+            </summary>
+        </member>
+        <member name="E:Ak.Framework.Wpf.Commands.NotifyCommand._canExecuteChanged">
+            <summary>
+            Событие, если изменился признак возможности исполнения
+            </summary>
+        </member>
+        <member name="E:Ak.Framework.Wpf.Commands.NotifyCommand.CanExecuteChanged">
+            <summary>
+            Событие изменения проверки возможности исполнения
+            </summary>
+        </member>
+        <member name="E:Ak.Framework.Wpf.Commands.NotifyCommand.Executed">
+            <summary>
+            Событие исполнения
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Commands.NotifyCommand.#ctor(System.Action{System.Object})">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="execute">Действие</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Commands.NotifyCommand.#ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean})">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="execute">Действие</param>
+            <param name="canExecute">Проверка возможности выполнения действия</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Commands.NotifyCommand.#ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean},System.Action{System.Exception})">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="execute">Действие</param>
+            <param name="canExecute">Проверка возможности выполнения действия</param>
+            <param name="exceptionAction">Действие при исключении</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Commands.NotifyCommand.CanExecute(System.Object)">
+            <summary>
+            Проверка возможности исполнения
+            </summary>
+            <param name="parameter">Параметр</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Commands.NotifyCommand.Execute(System.Object)">
+            <summary>
+            Исполнение
+            </summary>
+            <param name="parameter">Параметр</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Commands.NotifyCommand.NotifyCanExecuteChangedForAll">
+            <summary>
+            Нотификация всег слушателей о том, что изменилась проверка возможности имполнения
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Commands.NotifyCommand.NotifyCanExecuteChanged">
+            <summary>
+            Нотификация о том, что изменилась проверка возможности имполнения
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Commands.NotifyCommand.DefaultExceptionHandler(System.Exception)">
+            <summary>
+            Обработчик исключения по умолчанию
+            </summary>
+            <param name="ex">Исключение</param>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Controls.DragAndDropListBox`1">
+            <summary>
+            ListBox с функциональностью Drag and drop
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <seealso cref="T:System.Windows.Controls.ListBox" />
+        </member>
+        <member name="F:Ak.Framework.Wpf.Controls.DragAndDropListBox`1._dragStartPoint">
+            <summary>
+            Точка для Drag and drop
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Controls.DragAndDropListBox`1.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Controls.DragAndDropListBox`1.Move(`0,System.Int32,System.Int32)">
+            <summary>
+            Перемещение
+            </summary>
+            <param name="source">Начальный элемент</param>
+            <param name="sourceIndex">Индекс начального элемента</param>
+            <param name="targetIndex">Конечный элемент</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Controls.DragAndDropListBox`1.FindVisualParent``1(System.Windows.DependencyObject)">
+            <summary>
+            Нахождение родителя в VisualTree
+            </summary>
+            <typeparam name="P">Тип</typeparam>
+            <param name="child">Дочерний элемент</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Controls.VirtualizingWrapPanel">
+            <summary>
+            VirtualizingWrapPanel
+            class from: https://github.com/samueldjack/VirtualCollection/blob/master/VirtualCollection/VirtualCollection/VirtualizingWrapPanel.cs
+            MakeVisible() method from: http://www.switchonthecode.com/tutorials/wpf-tutorial-implementing-iscrollinfo
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.AllParametersAreTrueConverter">
+            <summary>
+            Конвертер возвращающий True, если все значения True
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.MultiValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.AllParametersAreTrueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="values">Значения</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.AllParametersAreTrueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetTypes">Целевые типы</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException">AllParametersAreTrueConverter</exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.AnyParametersAreTrueConverter">
+            <summary>
+            Конвертер возвращающий True, если хотя бы одно значение True
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.MultiValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.AnyParametersAreTrueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="values">Значения</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.AnyParametersAreTrueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetTypes">Целевые типы</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException">AllParametersAreTrueConverter</exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.BitmapToBitmapSourceConverter">
+            <summary>
+            Конвертация Bitmap в BitmapSource
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.BitmapToBitmapSourceConverter.Convert(System.Drawing.Bitmap)">
+            <summary>
+            Преобразование Bitmap в BitmapSource
+            </summary>
+            <param name="bitmap">Bitmap</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.BitmapToBitmapSourceConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.BitmapToBitmapSourceConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.BitmapToBitmapSourceConverter.DeleteObject(System.IntPtr)">
+            <summary>
+            Удаление объекта
+            </summary>
+            <param name="hObject">Объект</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.BoolToInvisibilityConverter">
+            <summary>
+            Конвертация bool в значение Visibility Collapsed
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.BoolToInvisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.BoolToInvisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.BoolToVisibilityConverter">
+            <summary>
+            Конвертация bool в Visibility
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.BoolToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.BoolToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.ColorToSolidColorBrushConverter">
+            <summary>
+            Конвертация цвета в SolidColorBrush
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ColorToSolidColorBrushConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ColorToSolidColorBrushConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.DoubleToPercentValueConverter">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.DoubleToPercentValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.DoubleToPercentValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.EmptyStringToVisibilityConverter">
+            <summary>
+            Конвертация, при которой, если параметр является пустой строкой, то Visibility принимает значение Visible
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EmptyStringToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EmptyStringToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.EnumDescriptionConverter">
+            <summary>
+            Конвертация Enum в его описание
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EnumDescriptionConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EnumDescriptionConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.EnumToBoolConverter">
+            <summary>
+            Преобразует значение типа Enum в bool.
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EnumToBoolConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EnumToBoolConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.EnumToStringConverter">
+            <summary>
+            Преобразует значение типа Enum в текст.
+            Возвращает описание объекта (если оно есть) или его текстовое представление.
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EnumToStringConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns>Преобразованное значение</returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EnumToStringConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация (не реализована)
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.EnumToVisibilityConverter">
+            <summary>
+            Преобразует значение типа Enum в Visibility
+            (при совпадении значений возвращает результат Visibility.Collapsed)
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EnumToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EnumToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.EnumToVisibilityHiddenConverter">
+            <summary>
+            Преобразует значение типа Enum в Visibility
+            (при совпадении значений возвращает результат Visibility.Hidden)
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EnumToVisibilityHiddenConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.EnumToVisibilityHiddenConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.FloatToPercentDoubleConverter">
+            <summary>
+            Преобразования float в проценты
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.FloatToPercentDoubleConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.FloatToPercentDoubleConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.FloatToPercentIntConverter">
+            <summary>
+            Преобразования float в проценты
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.FloatToPercentIntConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.FloatToPercentIntConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.GenericMultiValueConverter">
+            <summary>
+            Конвертер множественного набора значений, возвращающий оригинальный набор значений
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.MultiValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.GenericMultiValueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="values">Значения</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.GenericMultiValueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetTypes">Целевые типы</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.IntToBoolConverter">
+            <summary>
+            Конвертация целого числа в булевое
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.IntToBoolConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.IntToBoolConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.ListCountToSelectedIndexConverter">
+            <summary>
+            Конвертация количества элементов в списке в выбранный элемент
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ListCountToSelectedIndexConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ListCountToSelectedIndexConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.MultiValueConverterBase">
+            <summary>
+            Базовый класс для конвертации множественных значений
+            </summary>
+            <seealso cref="T:System.Windows.Markup.MarkupExtension" />
+            <seealso cref="T:System.Windows.Data.IMultiValueConverter" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.MultiValueConverterBase.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="values">Значения</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.MultiValueConverterBase.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetTypes">Целевые типы</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.MultiValueConverterBase.ProvideValue(System.IServiceProvider)">
+            <summary>
+            При применении возвращает объект, передаваемый в качестве значения в целевое свойство
+            </summary>
+            <param name="serviceProvider">Провайдер для получения значения</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.NotNullToBoolConverter">
+            <summary>
+            Конвертация не null-значения в bool равное True
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.NotNullToBoolConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.NotNullToBoolConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.NullToBoolConverter">
+            <summary>
+            Конвертация null-значения в bool равное True
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.NullToBoolConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.NullToBoolConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.NullToInvisibilityConverter">
+            <summary>
+            Конвертор значения null в Invisibility
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.NullToInvisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.NullToInvisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.NullToVisibilityConverter">
+            <summary>
+            Конвертация null в Visibility
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.NullToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.NullToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.ReverseBoolConverter">
+            <summary>
+            Конвертация на противоположное булевое значение
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ReverseBoolConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ReverseBoolConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.StringToBitmapImageConverter">
+            <summary>
+            Конвертация строки в BitmapImage
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.StringToBitmapImageConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.StringToBitmapImageConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.StringToDirectoryInfoConverter">
+            <summary>
+            Преобразование строки в DirectoryInfo
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.StringToDirectoryInfoConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.StringToDirectoryInfoConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.StringToLowerConverter">
+            <summary>
+            Преобразование строки в нижний регистр
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.StringToLowerConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.StringToLowerConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.StringToUpperConverter">
+            <summary>
+            Преобразование строки в верхний регистр
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.StringToUpperConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.StringToUpperConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.StringToUriConverter">
+            <summary>
+            Конвертация строки в Uri
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.StringToUriConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.StringToUriConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.ValueConverterBase">
+            <summary>
+            Базовый класс для конвертации значений
+            </summary>
+            <seealso cref="T:System.Windows.Markup.MarkupExtension" />
+            <seealso cref="T:System.Windows.Data.IValueConverter" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ValueConverterBase.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ValueConverterBase.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ValueConverterBase.ProvideValue(System.IServiceProvider)">
+            <summary>
+            При применении возвращает объект, передаваемый в качестве значения в целевое свойство
+            </summary>
+            <param name="serviceProvider">Провайдер для получения значения</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.ValueConverterHelper">
+            <summary>
+            Класс для конвертации значений
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ValueConverterHelper.TryConvert(System.Func{System.Object})">
+            <summary>
+            Выполнение попытки конвертации
+            </summary>
+            <param name="function">Функция</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.ValueToFormatStringConverter">
+            <summary>
+            Конвертация значения в форматированную строку
+            (Вместо фигурных скобок в маске нужно ставить обычные скобки)
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ValueToFormatStringConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ValueToFormatStringConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.ValueToNullConverter">
+            <summary>
+            Конвертация значения в null, если параметр равен true
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ValueToNullConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.ValueToNullConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Converters.WinFormsColorToWpfColorConverter">
+            <summary>
+            Конвертация цвета WinForms в цвет Wpf
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Converters.ValueConverterBase" />
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.WinFormsColorToWpfColorConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Конвертация значений
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Converters.WinFormsColorToWpfColorConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Обратная конвертация
+            </summary>
+            <param name="value">Значение</param>
+            <param name="targetType">Целевой тип</param>
+            <param name="parameter">Параметр конвертации</param>
+            <param name="culture">Локаль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Culture.CultureResourcesBase">
+            <summary>
+            Базовый класс для классов используемых для получения локализованных текстов в виде привязанных данных.
+            Используется для обеспечения возможности смены культуры без перезапуска приложения.
+            Наследующие классы должны добавить публичный метод, возвращающий ресурсы и конструктор, вызывающий конструктор этого класса с правильными параметрами.
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Culture.CultureResourcesBase.ResourceNames">
+            <summary>
+            Список наименований зарегистрированных ресурсов
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Culture.CultureResourcesBase.ResourceTypes">
+            <summary>
+            Список типов зарегистрированных ресурсов (классы типа Resources.Designer)
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.CultureResourcesBase.ChangeCulture(System.Globalization.CultureInfo)">
+            <summary>
+            Изменение текущей культуры
+            </summary>
+            <param name="culture">Новая культура</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.CultureResourcesBase.#ctor(System.String,System.Type)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="name">Имя ресурса</param>
+            <param name="resourceType">Тип ресурсов (класс типа Resources.Designer)</param>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Culture.RefreshUiHelper">
+            <summary>
+            Обновляет зависимости и контролы.
+            Используется для обновления пользовательского интерфейса при смене языка приложения
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.RefreshUiHelper.UpdateRecursive(System.Windows.DependencyObject)">
+            <summary>
+            Рекурсивно обновляет зависимости и контролы для заданного элемента и его потомков
+            </summary>
+            <param name="element">Элемент</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.RefreshUiHelper.UpdateComboboxesRecursive(System.Windows.DependencyObject)">
+            <summary>
+            Рекурсивно обновляет контролы типа Combobox для заданного элемента и его потомков
+            </summary>
+            <param name="element">Элемент</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.RefreshUiHelper.UpdateObjectDataSources(System.Windows.DependencyObject)">
+            <summary>
+            Обновляет источники данных для заданного элемента
+            </summary>
+            <param name="element">Элемент</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.RefreshUiHelper.UpdateBindingObjects(System.Windows.DependencyObject)">
+            <summary>
+            Обновляет привязки для заданного элемента
+            </summary>
+            <param name="element">Элемент</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.RefreshUiHelper.UpdateTabControlInactiveItems(System.Windows.DependencyObject)">
+            <summary>
+            Обновляет неактивные элементы TabControl.
+            Это вызвано тем, что комбобоксы некоррентно обновляются при изменении языка.
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.RefreshUiHelper.UpdateItemsControlIfNeeded(System.Windows.DependencyObject)">
+            <summary>
+            Обновляет коллекцию Items для элемента, если он ItemsControl.
+            </summary>
+            <param name="element">Элемент</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.RefreshUiHelper.UpdateComboboxIfNeeded(System.Windows.DependencyObject)">
+            <summary>
+            Обновлят визуальное отображение объекта, если он ComboBox.
+            При изменении языка у ComboBox не меняется отображение выбранного значения.
+            Чтобы обойти эту проблему процедура меняет выбранное значение на null, а потом на исходное значение.
+            </summary>
+            <param name="element">Элемент</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.RefreshUiHelper.UpdatePopupIfNeeded(System.Windows.DependencyObject)">
+            <summary>
+            Обновляет содержимое элемента, если он Popup
+            </summary>
+            <param name="element">Элемент</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.RefreshUiHelper.UpdateTextBlockRunsIfNeeded(System.Windows.DependencyObject)">
+            <summary>
+            Обновляет элементы типа Run для заданного элемента, если он TextBlock
+            </summary>
+            <param name="element">Элемент</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Culture.RefreshUiHelper.GetProperties(System.Windows.DependencyObject)">
+            <summary>
+            Возвращает список привязок для заданного элемента
+            </summary>
+            <param name="element">Элемент</param>
+            <returns>Список привязок для заданного элемента</returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Dialogs.Interfaces.IShowDialogAgent">
+            <summary>
+            Интерфейс класса для отображения диалоговых окон
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.Interfaces.IShowDialogAgent.ShowDialog``1(System.Object)">
+            <summary>
+            Отображение диалога
+            </summary>
+            <typeparam name="TDialogWindowType">Тип диалогового окна</typeparam>
+            <param name="dialogViewModel">ViewModel диалогового окна</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.Interfaces.IShowDialogAgent.ShowDialog``1(System.Object,``0@)">
+            <summary>
+            Отображение диалога
+            </summary>
+            <typeparam name="TDialogWindowType">Тип диалогового окна</typeparam>
+            <param name="dialogViewModel">ViewModel диалогового окна</param>
+            <param name="dialog">Диалоговое окно</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.Interfaces.IShowDialogAgent.ShowMessageBox(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)">
+            <summary>
+            Отображение сообщения
+            </summary>
+            <param name="messageBoxText">Текст сообщения</param>
+            <param name="caption">Заголовок</param>
+            <param name="button">Кнопка</param>
+            <param name="icon">Иконка</param>
+            <returns></returns>
+        </member>
+        <member name="P:Ak.Framework.Wpf.Dialogs.Interfaces.IShowDialogAgent.ActiveWindow">
+            <summary>
+            Активное (текущее окно)
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Dialogs.ShowDialogAgent">
+            <summary>
+            Класс для отображения диалоговых окон
+            </summary>
+            <seealso cref="T:Ak.Framework.Wpf.Dialogs.Interfaces.IShowDialogAgent" />
+        </member>
+        <member name="F:Ak.Framework.Wpf.Dialogs.ShowDialogAgent._activeWindow">
+            <summary>
+            Активное (текущее) окно
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Dialogs.ShowDialogAgent.Dispatcher">
+            <summary>
+            Диспетчер
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.Dialogs.ShowDialogAgent.ActiveWindow">
+            <summary>
+            Активное (текущее окно)
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.Dialogs.ShowDialogAgent.Instance">
+            <summary>
+            Синглтон класса для отображения диалоговых окон
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.ShowDialogAgent.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.ShowDialogAgent.ShowDialog``1(System.Object)">
+            <summary>
+            Отображение диалога
+            </summary>
+            <typeparam name="TDialogWindowType">Тип диалогового окна</typeparam>
+            <param name="dialogViewModel">ViewModel диалогового окна</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.ShowDialogAgent.ShowDialog``1(System.Object,``0@)">
+            <summary>
+            Отображение диалога
+            </summary>
+            <typeparam name="TDialogWindowType">Тип диалогового окна</typeparam>
+            <param name="dialogViewModel">ViewModel диалогового окна</param>
+            <param name="dialog">Диалоговое окно</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.ShowDialogAgent.ShowMessageBox(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)">
+            <summary>
+            Отображение сообщения
+            </summary>
+            <param name="messageBoxText">Текст сообщения</param>
+            <param name="caption">Заголовок</param>
+            <param name="button">Кнопк</param>
+            <param name="icon">Иконка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.ShowDialogAgent.ShowDialogImpl``1(System.Object)">
+            <summary>
+            Обработка отображения диалогового окна
+            </summary>
+            <typeparam name="TDialogWindowType">Тип</typeparam>
+            <param name="dialogViewModel">ViewModel диалогового окна</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.ShowDialogAgent.ShowDialogImpl``1(System.Object,System.Nullable{System.Boolean}@)">
+            <summary>
+            Обработка отображения диалогового окна
+            </summary>
+            <typeparam name="TDialogWindowType">Тип</typeparam>
+            <param name="dialogViewModel">ViewModel диалогового окна</param>
+            <param name="result">Диалоговое окно</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Dialogs.ShowDialogButtonHelper">
+            <summary>
+            Кнопка для работы с диалоговыми окнами
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Dialogs.ShowDialogButtonHelper.DialogResultProperty">
+            <summary>
+            Результат выполнения диалога
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.ShowDialogButtonHelper.GetDialogResult(System.Windows.DependencyObject)">
+            <summary>
+            Получение результата диалогового окна
+            </summary>
+            <param name="obj">Объект</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.ShowDialogButtonHelper.SetDialogResult(System.Windows.DependencyObject,System.Nullable{System.Boolean})">
+            <summary>
+            Установка результата диалогового окна
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="value">Значение</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Dialogs.ShowDialogButtonHelper.DialogResultPropertyChangedCallBack(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Dialogs the result property changed call back.
+            </summary>
+            <param name="target">The target.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Extensions.DependencyObjectExtensions">
+            <summary>
+            Extensions for dependency object
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Extensions.DependencyObjectExtensions.GetParentObject(System.Windows.DependencyObject)">
+            <summary>
+            Gets the parent object
+            </summary>
+            <param name="child">Child element</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Helpers.DataGridHelper">
+            <summary>
+            Класс для упрощения работы с DataGrid
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Helpers.DataGridHelper.GetCell(System.Windows.Controls.DataGridCellInfo)">
+            <summary>
+            Получение DataGridCell из DataGridCellInfo
+            </summary>
+            <param name="dataGridCellInfo">DataGridCellInfo</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Helpers.DataGridHelper.GetRowIndex(System.Windows.Controls.DataGridCell)">
+            <summary>
+            Получение индекса строки для ячейки
+            </summary>
+            <param name="dataGridCell">Ячейка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Helpers.DataGridHelper.GetDataGridFromChild(System.Windows.DependencyObject)">
+            <summary>
+            Получение DataGrid из дочернего элемента
+            </summary>
+            <param name="dataGridPart">Дочерний элемент</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Messaging.Interfaces.IMessenger">
+            <summary>
+            Интерфейс класса для работы с сообщениями
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Interfaces.IMessenger.Register(System.Enum,Ak.Framework.Wpf.Messaging.MessageHandler,System.Boolean)">
+            <summary>
+            Регистрация
+            </summary>
+            <param name="message">Значение инумератора для данного сообщения</param>
+            <param name="handler">Обработчик</param>
+            <param name="registerIfExists">Регистрация при существовании</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Interfaces.IMessenger.Register(System.String,Ak.Framework.Wpf.Messaging.MessageHandler,System.Boolean)">
+            <summary>
+            Регистрация
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="handler">Обработчик</param>
+            <param name="registerIfExists">Регистрация при существовании</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Interfaces.IMessenger.Send(System.Enum)">
+            <summary>
+            Отправка сообщения
+            </summary>
+            <param name="message">Значение инумератора для данного сообщения</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Interfaces.IMessenger.Send(System.Enum,System.Object[])">
+            <summary>
+            Отправка сообщения
+            </summary>
+            <param name="message">Значение инумератора для данного сообщения</param>
+            <param name="args">Параметры</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Interfaces.IMessenger.Send(System.String,System.Object[])">
+            <summary>
+            Отправка сообщения
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="args">Параметры</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Interfaces.IMessenger.Send(System.Enum,Ak.Framework.Wpf.Messaging.Message,System.Object[])">
+            <summary>
+            Отправка сообщения
+            </summary>
+            <param name="message">Значение инумератора для данного сообщения</param>
+            <param name="info">Сообщение</param>
+            <param name="args">Параметры</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Interfaces.IMessenger.Send(System.String,Ak.Framework.Wpf.Messaging.Message,System.Object[])">
+            <summary>
+            Отправка сообщения
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="info">Сообщение</param>
+            <param name="args">Параметры</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Interfaces.IMessenger.Unregister(System.Enum,Ak.Framework.Wpf.Messaging.MessageHandler)">
+            <summary>
+            Отключение регистрации
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="handler">Обработчик</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Interfaces.IMessenger.Unregister(System.String,Ak.Framework.Wpf.Messaging.MessageHandler)">
+            <summary>
+            Отключение регистрации
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="handler">Обработчик</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Messaging.Message">
+            <summary>
+            Сообщение
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.Messaging.Message.Name">
+            <summary>
+            Наименование
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.Messaging.Message.Sender">
+            <summary>
+            Отправитель
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.Messaging.Message.Value">
+            <summary>
+            Значение
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.Messaging.Message.TimeCreated">
+            <summary>
+            Время создания
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Message.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Message.#ctor(System.Object)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="value">Состояние</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Message.#ctor(System.Object,System.Object)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="sender">Отправитель</param>
+            <param name="value">Значение</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Message.#ctor(System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="name">Наименование</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Message.CreateEmpty">
+            <summary>
+            Сорздание пустого сообщения
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Message.GetDerivedTypes">
+            <summary>
+            Получение унаследованных типов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Messaging.MessageHandler">
+            <summary>
+            Делегат обработчика сообщения
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="args">Параметры</param>
+        </member>
+        <member name="T:Ak.Framework.Wpf.Messaging.Messenger">
+            <summary>
+            Класс для работы с сообщениями
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Messaging.Messenger._instance">
+            <summary>
+            Экземпляр класса
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Messaging.Messenger.InstanceLock">
+            <summary>
+            Блокирующий объект
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Messaging.Messenger._handlers">
+            <summary>
+            Обработчики
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.Messaging.Messenger._syncLock">
+            <summary>
+            Блокировщик доступа к ресурсам
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.Messaging.Messenger.Instance">
+            <summary>
+            Экземпляр объекта в виде синглтона
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.Register(System.String,Ak.Framework.Wpf.Messaging.MessageHandler,System.Boolean)">
+            <summary>
+            Регистрация
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="handler">Обработчик</param>
+            <param name="registerIfExists">Регистрация при существовании</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.Register(System.Enum,Ak.Framework.Wpf.Messaging.MessageHandler,System.Boolean)">
+            <summary>
+            Регистрация
+            </summary>
+            <param name="message">Значение инумератора для данного сообщения</param>
+            <param name="handler">Обработчик</param>
+            <param name="registerIfExists">Регистрация при существовании</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.Send(System.String,Ak.Framework.Wpf.Messaging.Message,System.Object[])">
+            <summary>
+            Отправка сообщения
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="info">Сообщение</param>
+            <param name="args">Параметры</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.Send(System.Enum,Ak.Framework.Wpf.Messaging.Message,System.Object[])">
+            <summary>
+            Отправка сообщения
+            </summary>
+            <param name="message">Значение инумератора для данного сообщения</param>
+            <param name="info">Сообщение</param>
+            <param name="args">Параметры</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.Send(System.String,System.Object[])">
+            <summary>
+            Отправка сообщения
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="args">Параметры</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.Send(System.Enum,System.Object[])">
+            <summary>
+            Отправка сообщения
+            </summary>
+            <param name="message">Значение инумератора для данного сообщения</param>
+            <param name="args">Параметры</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.Send(System.Enum)">
+            <summary>
+            Отправка сообщения
+            </summary>
+            <param name="message">Значение инумератора для данного сообщения</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.Unregister(System.String,Ak.Framework.Wpf.Messaging.MessageHandler)">
+            <summary>
+            Отключение регистрации
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="handler">Обработчик</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">handler</exception>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.Unregister(System.Enum,Ak.Framework.Wpf.Messaging.MessageHandler)">
+            <summary>
+            Отключение регистрации
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="handler">Обработчик</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.Messaging.Messenger.MessageEnumToString(System.Enum)">
+            <summary>
+            Преобразование строки в значение инумератора
+            </summary>
+            <param name="message">Сообщение</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Wpf.ViewModels.DisposableViewModel">
+            <summary>
+            ViewModel с деструктором
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.ViewModels.DisposableViewModel.IsDisposed">
+            <summary>
+            Декструктор запущен
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.ViewModels.DisposableViewModel.Dispose">
+            <summary>
+            Деструктор
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Wpf.ViewModels.Interfaces.IViewModel">
+            <summary>
+            Интерфейс ViewModel
+            </summary>
+        </member>
+        <member name="T:Ak.Framework.Wpf.ViewModels.ViewModelBase">
+            <summary>
+            Базовый класс для ViewModel
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.ViewModels.ViewModelBase._isInDesignMode">
+            <summary>
+            Режим редактирования
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.ViewModels.ViewModelBase._propertyChangedDelays">
+            <summary>
+            Отложенные изменния свойств
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.ViewModels.ViewModelBase.IsInDesignMode">
+            <summary>
+            Режим редактирования
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.ViewModels.ViewModelBase.IsInDesignModeStatic">
+            <summary>
+            Режим редактирования
+            </summary>
+        </member>
+        <member name="P:Ak.Framework.Wpf.ViewModels.ViewModelBase.VerifyPropertyNames">
+            <summary>
+            Проверка названия свойств
+            </summary>
+        </member>
+        <member name="E:Ak.Framework.Wpf.ViewModels.ViewModelBase.PropertyChanged">
+            <summary>
+            Событие изменение свойства
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.ViewModels.ViewModelBase.SetProperty``1(``0@,``0,System.String)">
+            <summary>
+            Установка свойства
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="storage">Хранилище</param>
+            <param name="value">Значение</param>
+            <param name="propertyName">Имя свойства</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Wpf.ViewModels.ViewModelBase.VerifyPropertyName(System.String)">
+            <summary>
+            Проверка названия свойства
+            </summary>
+            <param name="propertyName">Имя свойства</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.ViewModels.ViewModelBase.HandlerPropertyChanged(System.String)">
+            <summary>
+            Обработка события изменения свойства
+            </summary>
+            <param name="propertyName">Название свойства</param>
+        </member>
+        <member name="T:Ak.Framework.Wpf.ViewModels.ViewModelBase.PropertyChangedDelayer">
+            <summary>
+            Класс для отложенного изменения 
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Wpf.ViewModels.ViewModelBase.PropertyChangedDelayer._viewModel">
+            <summary>
+            ViewModel
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Wpf.ViewModels.ViewModelBase.PropertyChangedDelayer.#ctor(Ak.Framework.Wpf.ViewModels.ViewModelBase,System.Int32)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="viewModel">ViewModel</param>
+            <param name="milliseconds">Миллисекунжы</param>
+        </member>
+        <member name="M:Ak.Framework.Wpf.ViewModels.ViewModelBase.PropertyChangedDelayer.Dispose">
+            <summary>
+            Деструктор
+            </summary>
+        </member>
+    </members>
+</doc>

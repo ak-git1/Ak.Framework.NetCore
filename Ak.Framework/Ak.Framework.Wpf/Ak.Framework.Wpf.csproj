@@ -4,12 +4,16 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <Authors>Anton Kolesnikov</Authors>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Copyright © AkSoftware 2020</Copyright>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <Description>This library provides some useful classes for working with WPF.</Description>
     <PackageProjectUrl>https://github.com/ak-git1/Ak.Framework.NetCore</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Work\GitHub\Ak.Framework.NetCore\Source\Ak.Framework\Ak.Framework.Wpf\Ak.Framework.Wpf.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

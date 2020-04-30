@@ -13,7 +13,11 @@
     <PackageProjectUrl>https://github.com/ak-git1/Ak.Framework.NetCore</PackageProjectUrl>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <Description>Library contains functionality and extensions which lead to more convenient ways of .net developing.</Description>
-    <Version>2.0.6</Version>
+    <Version>2.0.7</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Work\GitHub\Ak.Framework.NetCore\Source\Ak.Framework\Ak.Framework.Core\Ak.Framework.Core.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
