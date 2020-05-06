@@ -179,11 +179,13 @@ namespace Ak.Framework.Core.Extensions
                     case "нет":
                     case "0":
                     case "false":
+                    case "no":
                         return false;
 
                     case "да":
                     case "1":
                     case "true":
+                    case "yes":
                         return true;
 
                     default:
