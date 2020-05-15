@@ -1853,7 +1853,7 @@
         </member>
         <member name="F:Ak.Framework.Core.Extensions.StringExtensions.ExtraSpacesRegex">
             <summary>
-            The extra spaces regex
+            Regex для поиска дублированных пробелов
             </summary>
         </member>
         <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ToMd5(System.String)">
@@ -2111,6 +2111,13 @@
             <returns></returns>
         </member>
         <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ExtractNumber(System.String)">
+            <summary>
+            Получение числа из строки
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.ExtractDecimal(System.String)">
             <summary>
             Получение числа из строки
             </summary>

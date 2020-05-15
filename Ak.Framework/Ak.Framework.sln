@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ak.Framework.Core", "Ak.Fra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ak.Framework.Morphology", "Ak.Framework.Morphology\Ak.Framework.Morphology.csproj", "{19137A52-2B3D-419C-9B81-6D2C0BB72CC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ak.Framework.Wpf", "Ak.Framework.Wpf\Ak.Framework.Wpf.csproj", "{2CAD06EA-E0E5-430F-A59F-167BAFD76363}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ak.Framework.Wpf", "Ak.Framework.Wpf\Ak.Framework.Wpf.csproj", "{2CAD06EA-E0E5-430F-A59F-167BAFD76363}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D2EFDC17-A58D-43B2-B52C-5D49637FF127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ak.Framework.Core.Tests.App", "Ak.Framework.Core.Tests.App\Ak.Framework.Core.Tests.App.csproj", "{8A682A7D-ECCF-4245-95E9-26A421F9DBF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +31,16 @@ Global
 		{2CAD06EA-E0E5-430F-A59F-167BAFD76363}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CAD06EA-E0E5-430F-A59F-167BAFD76363}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CAD06EA-E0E5-430F-A59F-167BAFD76363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A682A7D-ECCF-4245-95E9-26A421F9DBF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A682A7D-ECCF-4245-95E9-26A421F9DBF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A682A7D-ECCF-4245-95E9-26A421F9DBF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A682A7D-ECCF-4245-95E9-26A421F9DBF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8A682A7D-ECCF-4245-95E9-26A421F9DBF1} = {D2EFDC17-A58D-43B2-B52C-5D49637FF127}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {160C257A-A713-4C95-9970-5F5E9A81672F}

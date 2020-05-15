@@ -96,7 +96,7 @@ namespace Ak.Framework.Core.Extensions
         };
 
         /// <summary>
-        /// The extra spaces regex
+        /// Regex для поиска дублированных пробелов
         /// </summary>
         private static readonly Regex ExtraSpacesRegex = new Regex(@"\s\s+");
 
@@ -610,6 +610,16 @@ namespace Ak.Framework.Core.Extensions
         public static int? ExtractNumber(this string str)
         {
             return Regex.Match(str, @"\d+").Value.ToInt32(null);
+        }
+
+        /// <summary>
+        /// Получение числа из строки
+        /// </summary>
+        /// <param name="str">Строка</param>
+        /// <returns></returns>
+        public static decimal? ExtractDecimal(this string str)
+        {
+            return Regex.Match(str, @"\d+.+\d").Value.ToDecimal(null, true);
         }
 
         /// <summary>
