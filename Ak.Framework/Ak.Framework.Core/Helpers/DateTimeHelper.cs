@@ -61,5 +61,45 @@ namespace Ak.Framework.Core.Helpers
         {
             return GetAllWeeks(year).WhereEx(x => x.WeekEndDate.Year == year).ToListEx();
         }
+
+        /// <summary>
+        /// Получение дат начала недели в указанном диапазоне
+        /// </summary>
+        /// <param name="startDate">Начальная дата</param>
+        /// <param name="endDate">Конечная дата</param>
+        /// <returns></returns>
+        public static List<DateTime> GetWeekStartDatesInRange(DateTime startDate, DateTime endDate)
+        {
+            List<DateTime> list = new List<DateTime>();
+
+            DateTime tempDate = startDate.StartOfWeek().Date;
+            while (tempDate <= endDate)
+            {
+                list.Add(tempDate);
+                tempDate = tempDate.AddDays(7);
+            }
+
+            return list;
+        }
+
+        /// <summary>
+        /// Получение дат начала месяца в указанном диапазоне
+        /// </summary>
+        /// <param name="startDate">Начальная дата</param>
+        /// <param name="endDate">Конечная дата</param>
+        /// <returns></returns>
+        public static List<DateTime> GetMonthStartDatesInRange(DateTime startDate, DateTime endDate)
+        {
+            List<DateTime> list = new List<DateTime>();
+
+            DateTime tempDate = startDate.StartOfMonth().Date;
+            while (tempDate <= endDate)
+            {
+                list.Add(tempDate);
+                tempDate = tempDate.AddMonths(1);
+            }
+
+            return list;
+        }
     }
 }

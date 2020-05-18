@@ -2385,6 +2385,22 @@
             <param name="year">Год</param>
             <returns></returns>
         </member>
+        <member name="M:Ak.Framework.Core.Helpers.DateTimeHelper.GetWeekStartDatesInRange(System.DateTime,System.DateTime)">
+            <summary>
+            Получение дат начала недели в указанном диапазоне
+            </summary>
+            <param name="startDate">Начальная дата</param>
+            <param name="endDate">Конечная дата</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Helpers.DateTimeHelper.GetMonthStartDatesInRange(System.DateTime,System.DateTime)">
+            <summary>
+            Получение дат начала месяца в указанном диапазоне
+            </summary>
+            <param name="startDate">Начальная дата</param>
+            <param name="endDate">Конечная дата</param>
+            <returns></returns>
+        </member>
         <member name="T:Ak.Framework.Core.Helpers.EnumNamesHelper">
             <summary>
             Класс для получения наименований значений инумератора
