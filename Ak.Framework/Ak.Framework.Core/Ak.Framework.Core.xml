@@ -1753,6 +1753,14 @@
             <param name="obj1">Оригинальный объект</param>
             <param name="obj2">Объект для сравнения</param>
         </member>
+        <member name="M:Ak.Framework.Core.Extensions.ObjectExtensions.ConvertToSqlParameter(System.Object,System.Boolean)">
+            <summary>
+            Преобразование в SQL параметр
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="addQuotes">Добавление кавычек</param>
+            <returns></returns>
+        </member>
         <member name="T:Ak.Framework.Core.Extensions.StaticReflection">
             <summary>
             Расширение для получения названий членов класса.
@@ -2229,6 +2237,13 @@
         <member name="M:Ak.Framework.Core.Extensions.StringExtensions.RemoveExtraSpaces(System.String)">
             <summary>
             Удаление задвоенных пробелов
+            </summary>
+            <param name="str">Строка</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.StringExtensions.EscapeSqlStringParameter(System.String)">
+            <summary>
+            Эскапирование символов для SQL запроса
             </summary>
             <param name="str">Строка</param>
             <returns></returns>

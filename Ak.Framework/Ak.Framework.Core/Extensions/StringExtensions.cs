@@ -861,6 +861,18 @@ namespace Ak.Framework.Core.Extensions
             return ExtraSpacesRegex.Replace(str, " ");
         }
 
+        /// <summary>
+        /// Эскапирование символов для SQL запроса
+        /// </summary>
+        /// <param name="str">Строка</param>
+        /// <returns></returns>
+        public static string EscapeSqlStringParameter(this string str)
+        {
+            return str.Replace("'", "''")
+                .Replace("{", "{{")
+                .Replace("}", "}}");
+        }
+
         #endregion
     }
 }

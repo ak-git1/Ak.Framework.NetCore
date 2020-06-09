@@ -486,5 +486,19 @@ namespace Ak.Framework.Core.Extensions
             if (!(obj1 == null || obj1.Equals(obj2)))
                 obj1.Dispose();
         }
+
+        /// <summary>
+        /// Преобразование в SQL параметр
+        /// </summary>
+        /// <param name="obj">Объект</param>
+        /// <param name="addQuotes">Добавление кавычек</param>
+        /// <returns></returns>
+        public static string ConvertToSqlParameter(this object obj, bool addQuotes = false)
+        {
+            if (obj == null)
+                return "null";
+            else
+                return addQuotes ? $"'{obj}'" : obj.ToStr();
+        }
     }
 }

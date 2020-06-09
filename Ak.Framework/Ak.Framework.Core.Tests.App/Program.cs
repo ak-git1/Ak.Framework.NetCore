@@ -9,7 +9,8 @@ namespace Ak.Framework.Core.Tests.App
         static void Main(string[] args)
         {
             //var v = " 12.31%".ExtractDecimal();
-            var v = DateTimeHelper.GetMonthStartDatesInRange("2020.01.01".ToDateTime(), "2020.03.30".ToDateTime());
+            //var v = DateTimeHelper.GetMonthStartDatesInRange("2020.01.01".ToDateTime(), "2020.03.30".ToDateTime());
+            string v = 5.ConvertToSqlParameter(true);
         }
     }
 }
