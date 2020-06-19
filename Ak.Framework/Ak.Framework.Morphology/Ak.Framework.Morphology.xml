@@ -424,6 +424,39 @@
             <param name="str">Входная строка</param>
             <returns></returns>
         </member>
+        <member name="T:Ak.Framework.Morphology.Helpers.GendersAccostsEndingHelper">
+            <summary>
+            Класс для получения окончания к обращению
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Helpers.GendersAccostsEndingHelper.MaleAccostsEnding">
+            <summary>
+            Мужское окончание к обращению
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Helpers.GendersAccostsEndingHelper.FemaleAccostsEnding">
+            <summary>
+            Женское окончание к обращению
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Morphology.Helpers.GendersAccostsEndingHelper.NotSpecifiedAccostsEnding">
+            <summary>
+            Неопределенное окончание к обращению
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Helpers.GendersAccostsEndingHelper.GendersAccostsEnding(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Возвращает окончание к слову "Уважаемый(ая)" 
+            в зависимости от пола/отчества пользователя
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Morphology.Helpers.GendersAccostsEndingHelper.GendersAccostsEnding(System.String)">
+            <summary>
+            Возвращает окончание к слову "Уважаемый(ая)" 
+            в зависимости от ФИО пользователя для случаев, когда нет 
+            определения пола и отдельных полей имени и отчества
+            </summary>
+        </member>
         <member name="T:Ak.Framework.Morphology.Properties.Resources">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
