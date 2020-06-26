@@ -497,6 +497,11 @@ namespace Ak.Framework.Core.Extensions
         {
             if (obj == null)
                 return "null";
+            else if (obj is DateTime date)
+            {
+                string dateStr = date.ToString("yyyy-MM-dd HH:mm:ss.fff"); ;
+                return addQuotes ? $"'{dateStr}'" : dateStr;
+            }
             else
                 return addQuotes ? $"'{obj}'" : obj.ToStr();
         }
