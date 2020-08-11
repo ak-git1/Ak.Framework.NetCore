@@ -502,6 +502,13 @@ namespace Ak.Framework.Core.Extensions
                 string dateStr = date.ToString("yyyy-MM-dd HH:mm:ss.fff"); ;
                 return addQuotes ? $"'{dateStr}'" : dateStr;
             }
+            else if (obj is float
+                     || obj is decimal
+                     || obj is double)
+            {
+                string objStr = obj.ToStr().Replace(",", ".");
+                return addQuotes ? $"'{objStr}'" : objStr;
+            }
             else
                 return addQuotes ? $"'{obj}'" : obj.ToStr();
         }
