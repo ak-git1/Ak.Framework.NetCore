@@ -8,16 +8,31 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>StrongKey.snk</AssemblyOriginatorKeyFile>
-    <AssemblyVersion>2.0.6.0</AssemblyVersion>
-    <FileVersion>2.0.6.0</FileVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <FileVersion>2.1.0.0</FileVersion>
     <PackageProjectUrl>https://github.com/ak-git1/Ak.Framework.NetCore</PackageProjectUrl>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <Description>Library contains functionality and extensions which lead to more convenient ways of .net developing.</Description>
-    <Version>2.0.13</Version>
+    <Version>2.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>D:\Work\GitHub\Ak.Framework.NetCore\Source\Ak.Framework\Ak.Framework.Core\Ak.Framework.Core.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 
 </Project>
