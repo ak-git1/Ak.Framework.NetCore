@@ -510,7 +510,10 @@ namespace Ak.Framework.Core.Extensions
                 return addQuotes ? $"'{objStr}'" : objStr;
             }
             else
-                return addQuotes ? $"'{obj}'" : obj.ToStr();
+            {
+                string objStr = obj.ToStr().EscapeSqlStringParameter();
+                return addQuotes ? $"'{objStr}'" : objStr;
+            }
         }
     }
 }
