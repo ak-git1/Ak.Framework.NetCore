@@ -56,5 +56,16 @@ namespace Ak.Framework.Core.Extensions
             else
                 return firstOrDefault;
         }
+
+        /// <summary>
+        /// Замена списка на пустой экземпляр, если список равен null
+        /// </summary>
+        /// <typeparam name="T">Тип</typeparam>
+        /// <param name="enumerable">Список</param>
+        /// <returns></returns>
+        public static IEnumerable<T> OrEmptyIfNull<T>(this IEnumerable<T> enumerable)
+        {
+            return enumerable ?? Enumerable.Empty<T>();
+        }
     }
 }

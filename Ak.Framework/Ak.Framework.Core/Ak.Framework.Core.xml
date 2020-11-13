@@ -1559,6 +1559,14 @@
             <param name="list">Список</param>
             <returns></returns>
         </member>
+        <member name="M:Ak.Framework.Core.Extensions.ListExtensions.OrEmptyIfNull``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Замена списка на пустой экземпляр, если список равен null
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="enumerable">Список</param>
+            <returns></returns>
+        </member>
         <member name="T:Ak.Framework.Core.Extensions.ObjectExtensions">
             <summary>
             Расширения для объекта
