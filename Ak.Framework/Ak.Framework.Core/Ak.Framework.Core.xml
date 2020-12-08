@@ -336,6 +336,101 @@
             <param name="x">Объект для сравнения 1</param>
             <param name="y">Объект для сравнения 2</param>
         </member>
+        <member name="T:Ak.Framework.Core.Converters.Base32Converter">
+            <summary>
+            Конвертер в Base32
+            (RFC 4648 Base32)
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Converters.Base32Converter.Bitness">
+            <summary>
+            Разрядность
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Converters.Base32Converter.CharList">
+            <summary>
+            Список символов
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.Base32Converter.Encode(System.Int64)">
+            <summary>
+            Кодирование
+            </summary>
+            <param name="value">Значение</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.Base32Converter.Decode(System.String)">
+            <summary>
+            Декодирование
+            </summary>
+            <param name="value">Значение</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Converters.Base36Converter">
+            <summary>
+            Конвертер в Base64
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Converters.Base36Converter.Bitness">
+            <summary>
+            Разрядность
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Converters.Base36Converter.CharList">
+            <summary>
+            Список символов
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.Base36Converter.Encode(System.Int64)">
+            <summary>
+            Кодирование
+            </summary>
+            <param name="value">Значение</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.Base36Converter.Decode(System.String)">
+            <summary>
+            Декодирование
+            </summary>
+            <param name="value">Значение</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ak.Framework.Core.Converters.GenericNumberConverter">
+            <summary>
+            Обобщенный конвертер чисел
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Converters.GenericNumberConverter._bitness">
+            <summary>
+            Разрядность
+            </summary>
+        </member>
+        <member name="F:Ak.Framework.Core.Converters.GenericNumberConverter._charList">
+            <summary>
+            Список символов
+            </summary>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.GenericNumberConverter.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="bitness">Разрядность</param>
+            <param name="charList">Список символов</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.GenericNumberConverter.Encode(System.Int64)">
+            <summary>
+            Кодирование
+            </summary>
+            <param name="value">Значение</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Converters.GenericNumberConverter.Decode(System.String)">
+            <summary>
+            Декодирование
+            </summary>
+            <param name="input">Значение</param>
+            <returns></returns>
+        </member>
         <member name="T:Ak.Framework.Core.Converters.ResolutionConverter">
             <summary>
             Конвертер значения разрешения изображения
