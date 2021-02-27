@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>2.2.0</Version>
+    <TargetFramework>net5.0</TargetFramework>
+    <Version>5.0.0</Version>
     <Authors>Anton Kolesnikov</Authors>
     <Description>The library provides functionality for translitterization, names, lastnames and middlenames declining, converting numerics to string presentation. Right now everything works only for Russian language.</Description>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ak-git1/Ak.Framework.NetCore</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>Copyright © AkSoftware 2020</Copyright>
+    <Copyright>Copyright © AkSoftware 2021</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ak.Framework.Core" Version="2.1.2" />
+    <PackageReference Include="Ak.Framework.Core" Version="5.0.0" />
     <PackageReference Include="Humanizer" Version="2.8.26" />
   </ItemGroup>
 
