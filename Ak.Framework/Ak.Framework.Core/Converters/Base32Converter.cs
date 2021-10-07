@@ -16,7 +16,7 @@
         /// <summary>
         /// Список символов
         /// </summary>
-        private const string CharList = "abcdefghijklmnopqrstuwxz234567";
+        private const string CharList = "abcdefghijklmnopqrstuvwxyz234567";
 
         #endregion
 
