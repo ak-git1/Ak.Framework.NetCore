@@ -6,7 +6,7 @@ namespace Ak.Framework.Core.Extensions
     /// <summary>
     /// Расширения над стандартными методами целых чисел.
     /// </summary>
-    public static class IntegerExtentions
+    public static class IntegerExtensions
     {
         /// <summary>
         /// Проверка на то, что число находится среди значений инумератора

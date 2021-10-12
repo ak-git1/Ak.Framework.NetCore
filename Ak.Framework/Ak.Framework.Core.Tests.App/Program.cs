@@ -15,7 +15,7 @@ namespace Ak.Framework.Core.Tests.App
             //string v = (12.31).ConvertToSqlParameter(true);
 
 
-            string s = Base32Converter.Encode(63);
+            DateTime s = "30.12.2021".ToDateTimeExact("dd.MM.yyyy");
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Ak.Framework.Core.Extensions
     /// <summary>
     /// Расширения для конвертации данных
     /// </summary>
-    public static class ConvertExtentions
+    public static class ConvertExtensions
     {
         /// <summary>
         /// Конвертировать в строку.
@@ -266,6 +266,29 @@ namespace Ak.Framework.Core.Extensions
             return DateTime.TryParse(obj.ToStr(), out DateTime result) ? result : defaultValue;
         }
 
+        /// <summary>
+        /// Конвертировать в DateTime с учетом форматирования.
+        /// </summary>
+        /// <param name="obj">Объект.</param>
+        /// <param name="format">Формат строки.</param>
+        /// <param name="defaultValue">Значение по умолчанию.</param>
+        /// <returns></returns>
+        public static DateTime ToDateTimeExact(this object obj, string format, DateTime defaultValue = default(DateTime))
+        {
+            return DateTime.TryParseExact(obj.ToStr(), format, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime result) ? result : defaultValue;
+        }
+
+        /// <summary>
+        /// Конвертировать в DateTime с учетом форматирования.
+        /// </summary>
+        /// <param name="obj">Объект.</param>
+        /// <param name="format">Формат строки.</param>
+        /// <param name="defaultValue">Значение по умолчанию.</param>
+        /// <returns></returns>
+        public static DateTime? ToDateTimeExact(this object obj, string format, DateTime? defaultValue)
+        {
+            return DateTime.TryParseExact(obj.ToStr(), format, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime result) ? result : defaultValue;
+        }
 
         /// <summary>
         /// Конвертировать в TimeSpan.

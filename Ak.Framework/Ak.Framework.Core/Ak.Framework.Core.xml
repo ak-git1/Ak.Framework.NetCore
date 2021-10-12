@@ -657,12 +657,12 @@
             <param name="itemCondition">Условие</param>
             <returns></returns>
         </member>
-        <member name="T:Ak.Framework.Core.Extensions.ConvertExtentions">
+        <member name="T:Ak.Framework.Core.Extensions.ConvertExtensions">
             <summary>
             Расширения для конвертации данных
             </summary>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToStr(System.Object,System.String)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToStr(System.Object,System.String)">
             <summary>
             Конвертировать в строку.
             </summary>
@@ -670,7 +670,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToInt32(System.Object,System.Int32)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToInt32(System.Object,System.Int32)">
             <summary>
             Конвертировать в Int32.
             </summary>
@@ -678,7 +678,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToInt32(System.Object,System.Nullable{System.Int32})">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToInt32(System.Object,System.Nullable{System.Int32})">
             <summary>
             Конвертировать в Int32.
             </summary>
@@ -686,7 +686,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToInt64(System.Object,System.Int64)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToInt64(System.Object,System.Int64)">
             <summary>
             Конвертировать в Int64.
             </summary>
@@ -694,7 +694,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToInt64(System.Object,System.Nullable{System.Int64})">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToInt64(System.Object,System.Nullable{System.Int64})">
             <summary>
             Конвертировать в Int64.
             </summary>
@@ -702,7 +702,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDouble(System.Object,System.Double,System.Boolean)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToDouble(System.Object,System.Double,System.Boolean)">
             <summary>
             Конвертировать в Double.
             </summary>
@@ -711,7 +711,7 @@
             <param name="replaceDecimalSeparatorToEnvironmentsDecimalSeparator">Заменить разделитель на разделитель окружения</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDouble(System.Object,System.Nullable{System.Double},System.Boolean)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToDouble(System.Object,System.Nullable{System.Double},System.Boolean)">
             <summary>
             Конвертировать в Double.
             </summary>
@@ -720,7 +720,7 @@
             <param name="replaceDecimalSeparatorToEnvironmentsDecimalSeparator">Заменить разделитель на разделитель окружения</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToSingle(System.Object,System.Single)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToSingle(System.Object,System.Single)">
             <summary>
             Конвертировать в Single.
             </summary>
@@ -728,7 +728,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToSingle(System.Object,System.Nullable{System.Single})">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToSingle(System.Object,System.Nullable{System.Single})">
             <summary>
             Конвертировать в Single.
             </summary>
@@ -736,7 +736,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDecimal(System.Object,System.Decimal,System.Boolean)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToDecimal(System.Object,System.Decimal,System.Boolean)">
             <summary>
             Конвертировать в Decimal.
             </summary>
@@ -745,7 +745,7 @@
             <param name="replaceDecimalSeparatorToEnvironmentsDecimalSeparator">Заменить разделитель на разделитель окружения</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDecimal(System.Object,System.Nullable{System.Decimal},System.Boolean)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToDecimal(System.Object,System.Nullable{System.Decimal},System.Boolean)">
             <summary>
             Конвертировать в Decimal.
             </summary>
@@ -754,7 +754,7 @@
             <param name="replaceDecimalSeparatorToEnvironmentsDecimalSeparator">Заменить разделитель на разделитель окружения</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToBoolean(System.Object,System.Boolean)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToBoolean(System.Object,System.Boolean)">
             <summary>
             Конвертировать в Boolean.
             </summary>
@@ -762,7 +762,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToBoolean(System.Object,System.Nullable{System.Boolean})">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToBoolean(System.Object,System.Nullable{System.Boolean})">
             <summary>
             Конвертировать в Boolean.
             </summary>
@@ -770,7 +770,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToGuid(System.Object,System.Guid)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToGuid(System.Object,System.Guid)">
             <summary>
             Конвертировать в Guid.
             </summary>
@@ -778,7 +778,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToGuid(System.Object,System.Nullable{System.Guid})">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToGuid(System.Object,System.Nullable{System.Guid})">
             <summary>
             Конвертировать в Guid.
             </summary>
@@ -786,7 +786,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDateTime(System.Object,System.DateTime)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToDateTime(System.Object,System.DateTime)">
             <summary>
             Конвертировать в DateTime.
             </summary>
@@ -794,7 +794,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDateTime(System.Object,System.Nullable{System.DateTime})">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToDateTime(System.Object,System.Nullable{System.DateTime})">
             <summary>
             Конвертировать в DateTime.
             </summary>
@@ -802,7 +802,25 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToTimeSpan(System.Object,System.TimeSpan)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToDateTimeExact(System.Object,System.String,System.DateTime)">
+            <summary>
+            Конвертировать в DateTime с учетом форматирования.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="format">Формат строки.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToDateTimeExact(System.Object,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            Конвертировать в DateTime с учетом форматирования.
+            </summary>
+            <param name="obj">Объект.</param>
+            <param name="format">Формат строки.</param>
+            <param name="defaultValue">Значение по умолчанию.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToTimeSpan(System.Object,System.TimeSpan)">
             <summary>
             Конвертировать в TimeSpan.
             </summary>
@@ -810,7 +828,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToTimeSpan(System.Object,System.Nullable{System.TimeSpan})">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToTimeSpan(System.Object,System.Nullable{System.TimeSpan})">
             <summary>
             Конвертировать в TimeSpan?.
             </summary>
@@ -818,7 +836,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToTimeSpanEx(System.Object,System.TimeSpan)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToTimeSpanEx(System.Object,System.TimeSpan)">
             <summary>
             Конвертировать в TimeSpan.
             Позволяет устанавливать значения больше 24:00
@@ -827,7 +845,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToTimeSpanEx(System.Object,System.Nullable{System.TimeSpan})">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToTimeSpanEx(System.Object,System.Nullable{System.TimeSpan})">
             <summary>
             Конвертировать в TimeSpan?.
             Позволяет устанавливать значения больше 24:00, например, 25:00:00
@@ -836,7 +854,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToEnum``1(System.Object,``0)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToEnum``1(System.Object,``0)">
             <summary>
             Конвертировать в Enum
             </summary>
@@ -844,7 +862,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToEnum``1(System.Object,System.Nullable{``0})">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToEnum``1(System.Object,System.Nullable{``0})">
             <summary>
             Конвертировать в Enum.
             </summary>
@@ -852,7 +870,7 @@
             <param name="defaultValue">Значение по умолчанию.</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToBooleanString(System.Object,System.String,System.String)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToBooleanString(System.Object,System.String,System.String)">
             <summary>
             Приведение к строке
             </summary>
@@ -861,7 +879,7 @@
             <param name="falseString">Строка значения false</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDateString(System.Object,System.String,System.String)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToDateString(System.Object,System.String,System.String)">
             <summary>
             Преобразование к дате в строковом формате
             </summary>
@@ -870,7 +888,7 @@
             <param name="emptyDateString">Строка для пустой даты</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToDateTimeString(System.Object,System.String,System.String)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToDateTimeString(System.Object,System.String,System.String)">
             <summary>
             Преобразование к дате и времени в строковом формате
             </summary>
@@ -879,7 +897,7 @@
             <param name="emptyDateString">Строка для пустой даты</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToNumberString(System.Object,System.String,System.String,System.String)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToNumberString(System.Object,System.String,System.String,System.String)">
             <summary>
             Преобразование к числу в строковом формате
             </summary>
@@ -889,47 +907,47 @@
             <param name="delimeter">Разделитель дробной части</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToStream(System.Byte[])">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToStream(System.Byte[])">
             <summary>
             Преобразование массива байтов в поток
             </summary>
             <param name="bytes">Массив байтов</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Nullable{System.Decimal},System.String)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToJsString(System.Nullable{System.Decimal},System.String)">
             <summary>
             Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
             </summary>
             <param name="value">Значение</param>
             <param name="defaultValue">Значение по умолчанию</param>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Decimal)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToJsString(System.Decimal)">
             <summary>
             Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
             </summary>
             <param name="value">Значение</param>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Nullable{System.Double},System.String)">
-            <summary>
-            Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
-            </summary>
-            <param name="value">Значение</param>
-            <param name="defaultValue">Значение по умолчанию</param>
-        </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Double)">
-            <summary>
-            Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
-            </summary>
-            <param name="value">Значение</param>
-        </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Nullable{System.Single},System.String)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToJsString(System.Nullable{System.Double},System.String)">
             <summary>
             Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
             </summary>
             <param name="value">Значение</param>
             <param name="defaultValue">Значение по умолчанию</param>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.ConvertExtentions.ToJsString(System.Single)">
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToJsString(System.Double)">
+            <summary>
+            Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
+            </summary>
+            <param name="value">Значение</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToJsString(System.Nullable{System.Single},System.String)">
+            <summary>
+            Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
+            </summary>
+            <param name="value">Значение</param>
+            <param name="defaultValue">Значение по умолчанию</param>
+        </member>
+        <member name="M:Ak.Framework.Core.Extensions.ConvertExtensions.ToJsString(System.Single)">
             <summary>
             Преобразовать в строку корректную с точки зрения интерпритатора JavaScript
             </summary>
@@ -1319,12 +1337,12 @@
             <param name="sizeValue">Значение</param>
             <param name="sizeUnit">Единица измерения</param>
         </member>
-        <member name="T:Ak.Framework.Core.Extensions.IntegerExtentions">
+        <member name="T:Ak.Framework.Core.Extensions.IntegerExtensions">
             <summary>
             Расширения над стандартными методами целых чисел.
             </summary>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsInEnumsList``1(System.Int32,``0[])">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.IsInEnumsList``1(System.Int32,``0[])">
             <summary>
             Проверка на то, что число находится среди значений инумератора
             </summary>
@@ -1332,7 +1350,7 @@
             <param name="enums">Массив инумераторов</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsInEnumsList``1(``0,``0[])">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.IsInEnumsList``1(``0,``0[])">
             <summary>
             Проверка на то, что значение находится среди значений инумератора
             </summary>
@@ -1340,14 +1358,14 @@
             <param name="enums">Массив инумераторов</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.ToFileSizeString(System.Int32)">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.ToFileSizeString(System.Int32)">
             <summary>
             Возвращает строку в байтах/килобайтах/мегабайтах
             </summary>
             <param name="num">Число</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsFlagsEnabled``1(``0,``0[])">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.IsFlagsEnabled``1(``0,``0[])">
             <summary>
             Проверить, включены ли значения инумератора (для инумераторов с атрибутом FlagsAttribute)
             </summary>
@@ -1355,7 +1373,7 @@
             <param name="options">Его значения</param>
             <returns>Признак</returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsFlagsEnabled``1(System.Nullable{``0},``0[])">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.IsFlagsEnabled``1(System.Nullable{``0},``0[])">
             <summary>
             Проверить, включены ли значения инумератора (для инумераторов с атрибутом FlagsAttribute)
             </summary>
@@ -1363,56 +1381,56 @@
             <param name="options">Его значения</param>
             <returns>Признак</returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.Days(System.Int32)">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.Days(System.Int32)">
             <summary>
             Приведение к TimeSpan (дни)
             </summary>
             <param name="days">Дни</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.Hours(System.Int32)">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.Hours(System.Int32)">
             <summary>
             Приведение к TimeSpan (часы)
             </summary>
             <param name="hours">Часы</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.Miliseconds(System.Int32)">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.Miliseconds(System.Int32)">
             <summary>
             Приведение к TimeSpan (миллисекунды)
             </summary>
             <param name="ms">Миллисекунды</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.Minutes(System.Int32)">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.Minutes(System.Int32)">
             <summary>
             Приведение к TimeSpan (минуты)
             </summary>
             <param name="minutes">Минуты</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.Seconds(System.Int32)">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.Seconds(System.Int32)">
             <summary>
             Приведение к TimeSpan (секунды)
             </summary>
             <param name="seconds">Секунды</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsEven(System.Int32)">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.IsEven(System.Int32)">
             <summary>
             Четное
             </summary>
             <param name="number">Число</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.IsOdd(System.Int32)">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.IsOdd(System.Int32)">
             <summary>
             Нечетное
             </summary>
             <param name="number">Число</param>
             <returns></returns>
         </member>
-        <member name="M:Ak.Framework.Core.Extensions.IntegerExtentions.ToLetter(System.Int32,System.Boolean)">
+        <member name="M:Ak.Framework.Core.Extensions.IntegerExtensions.ToLetter(System.Int32,System.Boolean)">
             <summary>
             Преобразование числа в букву
             </summary>
