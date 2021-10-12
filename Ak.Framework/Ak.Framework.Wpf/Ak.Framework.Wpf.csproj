@@ -4,7 +4,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <Authors>Anton Kolesnikov</Authors>
-    <Version>5.0.0</Version>
+    <Version>5.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Copyright © AkSoftware 2021</Copyright>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
@@ -17,12 +17,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ak.Framework.Core" Version="5.1.0" />
     <PackageReference Include="NLog" Version="4.7.8" />
-    <PackageReference Include="System.Drawing.Common" Version="5.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Ak.Framework.Core\Ak.Framework.Core.csproj" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
   </ItemGroup>
 
 </Project>

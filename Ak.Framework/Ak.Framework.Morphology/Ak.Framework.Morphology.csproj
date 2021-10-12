@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>5.0.0</Version>
+    <Version>5.0.2</Version>
     <Authors>Anton Kolesnikov</Authors>
     <Description>The library provides functionality for translitterization, names, lastnames and middlenames declining, converting numerics to string presentation. Right now everything works only for Russian language.</Description>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ak.Framework.Core" Version="5.0.0" />
+    <PackageReference Include="Ak.Framework.Core" Version="5.1.0" />
     <PackageReference Include="Humanizer" Version="2.8.26" />
   </ItemGroup>
 
