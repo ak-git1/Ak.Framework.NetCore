@@ -616,34 +616,35 @@ namespace Ak.Framework.Core.Extensions
         /// Получение числа из строки
         /// </summary>
         /// <param name="str">Строка</param>
+        /// <param name="decimalSeparator">Разделитель дробной части</param>
         /// <returns></returns>
-        public static decimal? ExtractDecimal(this string str)
+        public static decimal? ExtractDecimal(this string str, string decimalSeparator = ".")
         {
-            return Regex.Match(str, @"\d+.+\d").Value.ToDecimal(null, true);
+            return Regex.Match(str, @$"\d+{decimalSeparator}+\d").Value.ToDecimal(null, true);
         }
 
         /// <summary>
         /// Получение кодировки символов
         /// </summary>
         /// <param name="str">Строка, представляющая название или идентификатор кодовой страницы</param>
-        /// <param name="сodePage">Идентификатор кодовой страницы, по умолчанию Cyrillic (DOS).</param>
+        /// <param name="codePage">Идентификатор кодовой страницы, по умолчанию Cyrillic (DOS).</param>
         /// <returns></returns>
-        public static Encoding GetEncoding(this string str, int сodePage = 866)
+        public static Encoding GetEncoding(this string str, int codePage = 866)
         {
             Encoding encoding = null;
 
             if (str.NotEmpty())
             {
-                int? codePage = str.ToInt32(null);
+                int? cp = str.ToInt32(null);
 
                 try
                 {
-                    encoding = (codePage.HasValue) ? Encoding.GetEncoding(codePage.Value) : encoding = Encoding.GetEncoding(str);
+                    encoding = (cp.HasValue) ? Encoding.GetEncoding(cp.Value) : encoding = Encoding.GetEncoding(str);
                 }
                 catch { }
             }
 
-            return encoding ?? Encoding.GetEncoding(сodePage);
+            return encoding ?? Encoding.GetEncoding(codePage);
         }
 
         /// <summary>

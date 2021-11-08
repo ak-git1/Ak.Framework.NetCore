@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using Ak.Framework.Core.Converters;
 using Ak.Framework.Core.Extensions;
@@ -15,7 +16,7 @@ namespace Ak.Framework.Core.Tests.App
             //string v = (12.31).ConvertToSqlParameter(true);
 
 
-            DateTime s = "30.12.2021".ToDateTimeExact("dd.MM.yyyy");
+            var s = "ам30.45ь".ExtractDecimal(CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator);
         }
     }
 }
