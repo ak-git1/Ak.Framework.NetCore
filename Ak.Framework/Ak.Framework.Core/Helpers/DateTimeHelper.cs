@@ -18,17 +18,23 @@ namespace Ak.Framework.Core.Helpers
         /// <param name="end">Конец диапазона</param>
         /// <param name="dayChunkSize">Длина промежутка</param>
         /// <returns></returns>
-        public static IEnumerable<Tuple<DateTime, DateTime>> SplitDateRange(DateTime start, DateTime end, int dayChunkSize)
+        public static IEnumerable<Tuple<DateTime, DateTime>> SplitDateRange(DateTime start, DateTime end, int dayChunkSize, bool disableOverlap = false)
         {
             DateTime startOfThisPeriod = start;
             while (startOfThisPeriod < end)
             {
-                DateTime endOfThisPeriod = startOfThisPeriod.AddDays(dayChunkSize);
-                endOfThisPeriod = endOfThisPeriod < end ? endOfThisPeriod : end;
+                DateTime tempPeriod = startOfThisPeriod.AddDays(dayChunkSize);
+                DateTime endOfThisPeriod = tempPeriod;
+
+                if (disableOverlap)
+                    endOfThisPeriod = endOfThisPeriod < end ? endOfThisPeriod.AddDays(-1) : end;
+                else
+                    endOfThisPeriod = endOfThisPeriod < end ? endOfThisPeriod : end;
+
                 yield return Tuple.Create(startOfThisPeriod, endOfThisPeriod);
-                startOfThisPeriod = endOfThisPeriod;
+                startOfThisPeriod = tempPeriod;
             }
-        }
+        }        
 
         /// <summary>
         /// Получение списка всех недель в году

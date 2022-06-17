@@ -2499,7 +2499,7 @@
             Класс для работы с датами
             </summary>
         </member>
-        <member name="M:Ak.Framework.Core.Helpers.DateTimeHelper.SplitDateRange(System.DateTime,System.DateTime,System.Int32)">
+        <member name="M:Ak.Framework.Core.Helpers.DateTimeHelper.SplitDateRange(System.DateTime,System.DateTime,System.Int32,System.Boolean)">
             <summary>
             Разделение диапазона дат на промежутки
             </summary>

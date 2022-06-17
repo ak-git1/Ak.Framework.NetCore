@@ -11,12 +11,11 @@ namespace Ak.Framework.Core.Tests.App
     {
         static void Main(string[] args)
         {
-            //var v = " 12.31%".ExtractDecimal();
-            //var v = DateTimeHelper.GetMonthStartDatesInRange("2020.01.01".ToDateTime(), "2020.03.30".ToDateTime());
-            //string v = (12.31).ConvertToSqlParameter(true);
+            var dates = DateTimeHelper.SplitDateRange("2022-01-01".ToDateTime(), "2022-01-31".ToDateTime(), 7, true);
+            foreach (var date in dates)
+                Console.WriteLine($"{date.Item1} - {date.Item2}");
 
-
-            var s = "ам30.45ь".ExtractDecimal(CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator);
+            Console.ReadKey();
         }
     }
 }
