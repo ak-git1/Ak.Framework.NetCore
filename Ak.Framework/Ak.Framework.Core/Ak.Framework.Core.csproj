@@ -4,16 +4,16 @@
     <TargetFramework>net6.0</TargetFramework>
     <Company></Company>
     <Authors>Anton Kolesnikov</Authors>
-    <Copyright>Copyright © AkSoftware 2021</Copyright>
+    <Copyright>Copyright © AkSoftware 2022</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>StrongKey.snk</AssemblyOriginatorKeyFile>
-    <AssemblyVersion>6.0.2.0</AssemblyVersion>
-    <FileVersion>6.0.2.0</FileVersion>
+    <AssemblyVersion>6.0.3.0</AssemblyVersion>
+    <FileVersion>6.0.3.0</FileVersion>
     <PackageProjectUrl>https://github.com/ak-git1/Ak.Framework.NetCore</PackageProjectUrl>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <Description>Library contains functionality and extensions which lead to more convenient ways of .net developing.</Description>
-    <Version>6.0.2</Version>
+    <Version>6.0.3</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

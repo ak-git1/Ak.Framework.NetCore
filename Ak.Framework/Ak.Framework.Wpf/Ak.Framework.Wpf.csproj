@@ -6,7 +6,7 @@
     <Authors>Anton Kolesnikov</Authors>
     <Version>6.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>Copyright © AkSoftware 2021</Copyright>
+    <Copyright>Copyright © AkSoftware 2022</Copyright>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <Description>This library provides some useful classes for working with WPF.</Description>
     <PackageProjectUrl>https://github.com/ak-git1/Ak.Framework.NetCore</PackageProjectUrl>
